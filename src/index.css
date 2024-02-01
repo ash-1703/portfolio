@@ -13,6 +13,23 @@
   box-shadow: 0px 4.42184px 107.23px rgba(255, 86, 246, 0.51);
 }
 
+.gradient-text {
+  background: linear-gradient(
+    92.23deg,
+    #ff56f6 21.43%,
+    #b936ee 50.63%,
+    #3bace2 100%,
+    #406aff 117.04%
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 36px; 
+  font-weight: bold; 
+  text-align: left;
+  
+}
+
+
 .btn:hover {
   background: linear-gradient(
     92.23deg,
@@ -34,10 +51,46 @@
   );
 }
 
-.active {
+.active{
   color: #fff;
   padding: 1rem;
   border-radius: 100%;
+}
+
+
+/* Skills.css */
+
+.skills-section {
+  text-align: center;
+  padding: 40px;
+}
+
+.skills-container {
+  display: grid;  
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px; /* Set your desired maximum width */
+  margin: 0 auto;  /* Center the container */
+} 
+
+.circular-progress-bar {
+  text-align: center;
+  padding: 50px;
+  grid-column: span 1;
+}
+
+.skill-label {
+  margin-top: 10px;
+  /* font-size: 16px; */
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
 }
 
 @layer base {
@@ -65,7 +118,8 @@
   .text-gradient {
     @apply bg-gradient-to-r text-transparent bg-clip-text from-[#42A6E3] to-[#FF56F6] font-bold font-primary hover:from-[#FF56F6] hover:to-[#42A6E3];
   }
-  .section {
+  /* .section {
     @apply py-8 lg:py-24 lg:h-screen flex items-center;
-  }
+    
+  } */
 }
