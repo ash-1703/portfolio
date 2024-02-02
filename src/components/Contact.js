@@ -32,6 +32,7 @@ const Contact = () => {
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.3 }}
+            netlify netlify-honeypot="bot-field"
             className="flex-1 border round-2xl flex flex-col gap-y-6 pb-24 p-6 items-start "
           >
             <input
