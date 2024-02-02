@@ -70,7 +70,6 @@ const About = () => {
                 </div>
               </div>
             </div>
-            
           </motion.div>
         </div>
       </div>

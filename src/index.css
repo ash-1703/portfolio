@@ -39,7 +39,7 @@
     #ff56f6 117.04%
   );
 }
-
+/* 
 .gradient,
 .active {
   background: linear-gradient(
@@ -55,7 +55,7 @@
   color: #fff;
   padding: 1rem;
   border-radius: 100%;
-}
+} */
 
 
 /* Skills.css */
@@ -71,12 +71,13 @@
   justify-content: space-between;
   align-items: center;
   max-width: 900px; /* Set your desired maximum width */
-  margin: 0 auto; /* Center the container */
-}
+  margin: 0 auto;  /* Center the container */
+} 
 
 .circular-progress-bar {
   text-align: center;
   padding: 50px;
+  grid-column: span 1;
 }
 
 .skill-label {
@@ -84,6 +85,13 @@
   /* font-size: 16px; */
 }
 
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+}
 
 @layer base {
   body {

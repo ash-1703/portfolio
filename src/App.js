@@ -7,7 +7,7 @@ import About from './components/About';
 import Services from './components/Services';
 import Work from './components/Work';
 import Contact from './components/Contact';
-import Skills from './components/Skills'
+import Experiance from './components/Experiance';
 const App = () => {
   return (
     <div className='bg-site bg-no-repeat bg-cover overflow-hidden'>
@@ -16,7 +16,8 @@ const App = () => {
       <Nav />
       <About />
       <Services />
-      <Skills />
+      {/* <Skills /> */}
+      <Experiance/>
       <Work />
       <Contact />
       {/* <div className='h-[4000px]'></div> */}
