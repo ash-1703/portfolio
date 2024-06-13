@@ -34,11 +34,11 @@ const About = () => {
           >
             <h2 className="h2 text-accent">About me.</h2>
             <h3 className="h3 mb-4">
-              I'm a new graduate software developer with 6 months of internship
+              I'm a new graduate software developer with 1 year of internship
               experience.
             </h3>
             <p className="mb-6">
-              I am currently pursuing my Masters in Computer Science from the
+              I have recently graduated with a Masters in Computer Science from the
               University of Texas at Arlington. I value collaboration, learning,
               and growth, and I seek to join a team that shares these values and
               provides opportunities for diverse perspectives and experiences.
@@ -47,10 +47,10 @@ const About = () => {
             <div className="flex gap-x-6 lg:gap-x-10 mb-12">
               <div>
                 <div className="text-[40px] font-tertiary text-gradient mb-2">
-                  {inView ? <CountUp start={0} end={6} /> : null}
+                  {inView ? <CountUp start={0} end={1} /> : null}
                 </div>
                 <div className="font-primary text-sm tracking-[2px]">
-                  Months of <br /> Experience
+                  Year of <br /> Experience
                 </div>
               </div>
               <div>

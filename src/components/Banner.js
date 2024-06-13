@@ -83,7 +83,7 @@ const Banner = () => {
                 Contact me
               </Link>
               <a
-                href="https://drive.google.com/file/d/19NfTksDktD2SFtan-7Qy-fvJFhcu7yMo/view?usp=drive_link"
+                href="https://drive.google.com/file/d/1VltysZi7jtf4ab8WHGuKipHf4Y3SK_Fk/view?usp=sharing"
                 target="_blank"
                 className="text-gradient btn-link"
               >

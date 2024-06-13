@@ -206,7 +206,7 @@ const Work = () => {
             </a>
             <div class="flex-grow">
               <p class="leading-relaxed text-lg pt-6">
-                Simplifying management, maximizing control. <br />
+                "Simplifying management, maximizing control" <br />
                 -Streamlined, Smart, Seamless!-
               </p>
             </div>
@@ -237,7 +237,7 @@ const Work = () => {
             </a>
             <div class="flex-grow">
               <p class="leading-relaxed text-lg pt-6">
-                Unleashing Creativity and Unity <br /> -where Teamwork
+                "Unleashing Creativity and Unity" <br /> -where Teamwork
                 Transforms Ideas into Spectacular Realities! -
               </p>
             </div>

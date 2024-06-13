@@ -12,7 +12,7 @@ const experiances = [
     name: "Graduate Teaching Assistant",
     description:
       "Mentored 60+ students for Software Design Patterns (CSE 5322) course",
-    dates: "Aug 2023 - Present",
+    dates: "Aug 2023 - May 2024",
   },
   {
     name: "",
@@ -41,7 +41,7 @@ const experiances1 = [
   {
     name: "Software Development Intern",
     description: "Built user-friendly navigation and interactive features",
-    dates: "Jan 2022 - June 2022",
+    dates: "June 2021 - June 2022",
   },
   {
     name: "",

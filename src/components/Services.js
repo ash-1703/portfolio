@@ -16,8 +16,8 @@ const services = [
     description: "Java, Android Studio, Firebase",
   },
   {
-    name: "Data Engineering",
-    description: "Apache Hadoop, Apache Spark, AWS, Git ",
+    name: "Data Analytics",
+    description: "SQL, Python, MS Excel, Tableau, Power BI",
   },
   {
     name: "Cloud Computing",
@@ -40,7 +40,7 @@ const Services = () => {
           >
             <h2 className="h2 text-accent mb-6">What I Do.</h2>
             <h3 className="h3 max-w-[455px] mb-16">
-              I'm a new graduate software developer with 6 months of internship
+              I'm a new graduate software developer with 1 year of internship
               experience.
             </h3>
             <Link
