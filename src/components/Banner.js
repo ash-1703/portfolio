@@ -1,6 +1,6 @@
 import React from "react";
 //images
-import MyImage from "../assets/ash.png";
+import MyImage from "../assets/ashh.png";
 //icons
 import { FaGithub, FaLinkedinIn, FaDribbble } from "react-icons/fa";
 //type animation
