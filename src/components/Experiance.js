@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 //variants
 import { fadeIn } from "../variants";
 import { Link } from "react-scroll";
-//experiances data
-const experiances = [
+//experiences data
+const experiences = [
   
   {
     name: "Research Assistant",
@@ -32,7 +32,7 @@ const experiances = [
   },
 ];
 
-const experiances1 = [
+const experiences1 = [
   {
     name: "",
     description: "",
@@ -41,7 +41,7 @@ const experiances1 = [
   {
     name: "Graduate Teaching Assistant",
     description:
-      "Mentored 60+ students for Software Design Patterns (CSE 5322) course",
+      "Assisted students in an in-depth study of 23 software design patterns ",
     dates: "Aug 2023 - May 2024",
   },
   {
@@ -52,16 +52,16 @@ const experiances1 = [
   {
     name: "Google Developer Students Club",
     description:
-      "Showcased a live project before 50+ students on Google Lens clone application, integrating Firebase and the SerpAPI ",
+      "Developed Google Lens Clone using Google Vision API, achieving 90% accuracy in object detection and text recognition",
     dates: "Aug 2021 - Aug 2022",
   },
 ];
 
-const Experiance = () => {
+const Experience = () => {
   return (
     <section className="py-10" id="experiance">
       <div className="container mx-auto mt-5 text-center">
-        <h2 className="h2 text-accent">My Experiance.</h2>
+        <h2 className="h2 text-accent">My Experience.</h2>
         <div className="flex flex-col lg:flex-row ">
           {/* text & image */}
           <motion.div
@@ -72,9 +72,9 @@ const Experiance = () => {
             className="flex-1 mb-12 lg:mb-0"
           >
             <div>
-              {experiances.map((experiance, index) => {
+              {experiences.map((experience, index) => {
                 //destructure experiance
-                const { name, description, dates } = experiance;
+                const { name, description, dates } = experience;
 
                 return (
                   <div
@@ -95,7 +95,7 @@ const Experiance = () => {
               })}
             </div>
           </motion.div>
-          {/* experiances */}
+          {/* experiences */}
 
           <div className="border-r border-white/20 h-[584px] ml-16"></div>
 
@@ -106,11 +106,11 @@ const Experiance = () => {
             viewport={{ once: false, amount: 0.3 }}
             className="flex-1"
           >
-            {/* experiances list */}
+            {/* experiences list */}
             <div className="pl-14">
-              {experiances1.map((experiances1, index) => {
+              {experiences1.map((experiences1, index) => {
                 //destructure experiance
-                const { name, description, dates } = experiances1;
+                const { name, description, dates } = experiences1;
 
                 return (
                   <div
@@ -137,4 +137,4 @@ const Experiance = () => {
   );
 };
 
-export default Experiance;
+export default Experience;

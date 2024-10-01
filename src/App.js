@@ -8,13 +8,13 @@ import Services from './components/Services';
 import Work from './components/Work';
 import Contact from './components/Contact';
 import Experiance from './components/Experiance';
-import Info from './components/info';
+// import Info from './components/info';
 const App = () => {
   return (
     <div className='bg-site bg-no-repeat bg-cover overflow-hidden'>
       <Header />
       <Banner />
-      <Info/>
+      {/* <Info/> */}
       <Nav />
       <About />
       <Services />
