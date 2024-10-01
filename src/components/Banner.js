@@ -61,9 +61,7 @@ const Banner = () => {
               className="mb-8 max-w-lg mx-auto lg:mx-0"
             >
               An ambitious new graduate in software development, seamlessly
-              translating ideas into executable brilliance, prepared to reshape
-              the digital world with innovative solutions and unwavering
-              determination
+              translating ideas into executable brilliance
             </motion.p>
             <motion.div
               variants={fadeIn("down", 0.6)}

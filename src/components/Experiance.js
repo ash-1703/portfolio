@@ -8,11 +8,12 @@ import { fadeIn } from "../variants";
 import { Link } from "react-scroll";
 //experiances data
 const experiances = [
+  
   {
-    name: "Graduate Teaching Assistant",
+    name: "Research Assistant",
     description:
-      "Mentored 60+ students for Software Design Patterns (CSE 5322) course",
-    dates: "Aug 2023 - May 2024",
+      "Leveraged ChatGPT to improve brainstorming and classification processes",
+    dates: "Jul 2024 - Present",
   },
   {
     name: "",
@@ -20,10 +21,9 @@ const experiances = [
     dates: "",
   },
   {
-    name: "Google Developer Students Club",
-    description:
-      "Showcased a live project before 50+ students on Google Lens clone application, integrating Firebase and the SerpAPI ",
-    dates: "Aug 2021 - Aug 2022",
+    name: "Software Development Intern",
+    description: "Built user-friendly navigation and interactive features",
+    dates: "June 2021 - June 2022",
   },
   {
     name: "",
@@ -39,9 +39,10 @@ const experiances1 = [
     dates: "",
   },
   {
-    name: "Software Development Intern",
-    description: "Built user-friendly navigation and interactive features",
-    dates: "June 2021 - June 2022",
+    name: "Graduate Teaching Assistant",
+    description:
+      "Mentored 60+ students for Software Design Patterns (CSE 5322) course",
+    dates: "Aug 2023 - May 2024",
   },
   {
     name: "",
@@ -49,10 +50,10 @@ const experiances1 = [
     dates: "",
   },
   {
-    name: "Pie Infocomm Pvt Ltd",
+    name: "Google Developer Students Club",
     description:
-      "Built the project entitled - Impact of Covid-19 on Airport Traffic",
-    dates: "July 2021 - August 2021",
+      "Showcased a live project before 50+ students on Google Lens clone application, integrating Firebase and the SerpAPI ",
+    dates: "Aug 2021 - Aug 2022",
   },
 ];
 

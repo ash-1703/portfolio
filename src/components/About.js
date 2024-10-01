@@ -34,29 +34,26 @@ const About = () => {
           >
             <h2 className="h2 text-accent">About me.</h2>
             <h3 className="h3 mb-4">
-              I'm a new graduate software developer with 1 year of internship
-              experience.
+              I'm a new graduate software developer with 1 + years of experience.
             </h3>
             <p className="mb-6">
-              I have recently graduated with a Masters in Computer Science from the
-              University of Texas at Arlington. I value collaboration, learning,
-              and growth, and I seek to join a team that shares these values and
-              provides opportunities for diverse perspectives and experiences.
+            🚀 Recent Graduate | Master of Science in Computer and Information Sciences (GPA: 3.83/4) <br></br>
+            🎓 Bachelor of Engineering in Computer Engineering from Mumbai University (CGPA: 8.39/10)
             </p>
             {/* stats */}
             <div className="flex gap-x-6 lg:gap-x-10 mb-12">
               <div>
                 <div className="text-[40px] font-tertiary text-gradient mb-2">
-                  {inView ? <CountUp start={0} end={1} /> : null}
+                  {inView ? <CountUp start={0} end={1} /> : null}+
                 </div>
                 <div className="font-primary text-sm tracking-[2px]">
-                  Year of <br /> Experience
+                  Years of <br /> Experience
                 </div>
               </div>
               <div>
                 <div className="text-[40px] font-tertiary text-gradient mb-2">
                   {inView ? (
-                    <CountUp start={0} end={3.81} decimals={2} duration={2} />
+                    <CountUp start={0} end={3.83} decimals={2} duration={2} />
                   ) : null}
                 </div>
                 <div className="font-primary text-sm tracking-[2px]">GPA</div>

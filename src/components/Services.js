@@ -39,10 +39,9 @@ const Services = () => {
             className="flex-1 mb-12 lg:mb-0"
           >
             <h2 className="h2 text-accent mb-6">What I Do.</h2>
-            <h3 className="h3 max-w-[455px] mb-16">
-              I'm a new graduate software developer with 1 year of internship
-              experience.
-            </h3>
+            <h4 className="h4 max-w-[455px] mb-16">
+            💡 I am passionate about using my technical expertise to develop impactful software solutions. With hands-on experience in both front-end and back-end development, I have a proven track record of creating user-friendly applications and solving real-world problems.
+            </h4>
             <Link
               to="work"
               activeClass="active"
