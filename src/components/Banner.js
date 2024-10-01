@@ -105,7 +105,7 @@ const Banner = () => {
               <a href="https://github.com/ash-1703" target="_blank">
                 <FaGithub />
               </a>
-              <a href="https://leetcode.com/ash-0173/" target="_blank">
+              <a href="https://leetcode.com/u/ash-1703/" target="_blank">
                 <FaDribbble />
               </a>
             </motion.div>
