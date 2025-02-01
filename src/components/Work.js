@@ -36,7 +36,7 @@ const Work = () => {
         >
           {/* Project 1 */}
           <div className="p-4 flex flex-col text-center items-center">
-            <a href="https://www.tupeskinclinic.com/" target="_blank" rel="noopener noreferrer">
+            <a>
               <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl mb-6 w-[500px] h-[250px]">
                 <div className="group-hover:bg-black/80 w-full h-full absolute z-40 transition-all duration-300"></div>
                 <img
