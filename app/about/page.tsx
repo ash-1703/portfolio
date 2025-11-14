@@ -5,7 +5,7 @@ export default function AboutPage() {
     <section className="py-16 grid md:grid-cols-[1fr,1.3fr] gap-10 items-start">
       {/* <div className="card p-2"> */}
         <Image
-          src="/images/aishwarya.jpg"
+          src="/portfolio/images/aishwarya.jpg"
           alt="Aishwarya Tupe portrait"
           width={600}
           height={600}

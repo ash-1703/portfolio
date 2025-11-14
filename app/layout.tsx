@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title: "Aishwarya Tupe — Portfolio",
   description: "Full‑stack developer | AI & Agents",
   icons: {
-    icon: '/favicon.ico',
+    icon: '/portfolio/favicon.ico',
   },
   openGraph: {
     title: "Aishwarya Tupe — Portfolio",
@@ -38,7 +38,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/mission" className="hover:text-white">Mission</Link>
               <Link href="/about" className="hover:text-white">About</Link>
               <Link href="/#contact" className="hover:text-white">Contact</Link>
-              <a href="/resume.pdf" className="btn text-sm">Resume</a>
+              <a
+                href="https://drive.google.com/file/d/1fTFcixdS7mQ1SzLYqgmDOZFVa6FsbCnA/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn text-sm"
+              >
+                Resume
+              </a>
             </div>
           </nav>
         </header>

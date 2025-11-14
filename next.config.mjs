@@ -1,11 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  basePath: '/portfolio',
+  assetPrefix: '/portfolio',
+  trailingSlash: true,
   images: {
-    formats: ['image/avif', 'image/webp'],
+    unoptimized: true,
   },
   compress: true,
   poweredByHeader: false,
-  swcMinify: true,
   reactStrictMode: true,
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
