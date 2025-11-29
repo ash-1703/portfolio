@@ -5,6 +5,15 @@ import { useEffect, useRef, useState } from "react";
 type Msg = { role: "user" | "assistant"; content: string };
 
 export default function ChatWidget() {
+
+  const localApi = "/portfolio/api/insight";
+
+  const apiUrl =
+    (process.env.NEXT_PUBLIC_INSIGHT_API_URL as string | undefined) ||
+    (typeof window !== "undefined" && window.location.hostname.endsWith("github.io")
+      ? "https://insight-agent-full.fly.dev/ask"
+      : localApi);
+
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
@@ -32,20 +41,60 @@ export default function ChatWidget() {
     setLoading(true);
 
     try {
-      const res = await fetch("/api/insight", {
+      // If calling Fly.io directly, send {question} instead of {messages}
+      const isFlyDirect = apiUrl.includes("fly.dev");
+      const payload = isFlyDirect 
+        ? { question: text }
+        : { messages: next };
+      
+      const res = await fetch(apiUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ messages: next }),
+        body: JSON.stringify(payload),
       });
 
-      const data = await res.json();
+      const contentType = res.headers.get("content-type") || "";
+      if (!res.ok) {
+        const text = await res.text().catch(() => "");
+        const hint = text.startsWith("<!DOCTYPE") || text.startsWith("<")
+          ? "Got an HTML error page (likely a 404). On localhost, open /portfolio/, not /."
+          : text.slice(0, 120);
+        setMessages((m) => [
+          ...m,
+          { role: "assistant", content: `Request failed (${res.status}). ${hint}` },
+        ]);
+        return;
+      }
+
+      if (!contentType.includes("application/json")) {
+        const text = await res.text().catch(() => "");
+        const hint = text.startsWith("<!DOCTYPE") || text.startsWith("<")
+          ? "Received HTML instead of JSON (are you on the correct /portfolio path?)."
+          : "Unexpected response type.";
+        setMessages((m) => [
+          ...m,
+          { role: "assistant", content: `Unexpected response. ${hint}` },
+        ]);
+        return;
+      }
+
+      const data = await res.json().catch(() => null);
       if (data?.reply) {
         setMessages((m) => [...m, { role: "assistant", content: data.reply }]);
+      } else if (data?.answer) {
+        // Fly.io returns {answer}
+        setMessages((m) => [...m, { role: "assistant", content: data.answer }]);
       } else {
-        setMessages((m) => [...m, { role: "assistant", content: "Hmm, I didn’t get a reply from the agent." }]);
+        setMessages((m) => [
+          ...m,
+          { role: "assistant", content: "Hmm, I didn't get a reply from the agent." },
+        ]);
       }
     } catch (e: any) {
-      setMessages((m) => [...m, { role: "assistant", content: `Error: ${e?.message ?? "Something went wrong"}` }]);
+      setMessages((m) => [
+        ...m,
+        { role: "assistant", content: `Error: ${e?.message ?? "Something went wrong"}` },
+      ]);
     } finally {
       setLoading(false);
     }

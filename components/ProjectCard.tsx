@@ -23,7 +23,7 @@ export default function ProjectCard({ title, tags, description, link, repo }: Pr
         ))}
       </div>
       <div className="mt-5 flex gap-4">
-        {link && <a className="btn" href={link} target="_blank" rel="noopener noreferrer">Live</a>}
+        {link && <a className="btn" href={link} target="_blank" rel="noopener noreferrer">Deployed Link</a>}
         {repo && <a className="inline-flex items-center rounded-2xl px-4 py-2 border border-white/15 hover:border-white/30 transition" href={repo} target="_blank" rel="noopener noreferrer">Code</a>}
       </div>
     </article>

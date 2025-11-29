@@ -1,8 +1,8 @@
 import "./../styles/globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Link from "next/link";
 import ChatWidget from "../components/ChatWidget";
+import Navbar from "../components/Navbar";
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -28,26 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={inter.className} suppressHydrationWarning>
         <header className="sticky top-0 z-50 bg-[var(--bg)]/70 backdrop-blur border-b border-white/10">
-          <nav className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
-            <Link href="/" className="font-semibold tracking-tight text-lg">
-              <span className="text-blue-400">Aishwarya</span> Tupe
-            </Link>
-            <div className="flex items-center gap-6 text-sm text-slate-300">
-              <Link href="/#projects" className="hover:text-white">Projects</Link>
-              <Link href="/experience" className="hover:text-white">Experience</Link>
-              <Link href="/mission" className="hover:text-white">Mission</Link>
-              <Link href="/about" className="hover:text-white">About</Link>
-              <Link href="/#contact" className="hover:text-white">Contact</Link>
-              <a
-                href="https://drive.google.com/file/d/1fTFcixdS7mQ1SzLYqgmDOZFVa6FsbCnA/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn text-sm"
-              >
-                Resume
-              </a>
-            </div>
-          </nav>
+          <Navbar />
         </header>
         <main className="mx-auto max-w-6xl px-4">{children}</main>
          <ChatWidget />

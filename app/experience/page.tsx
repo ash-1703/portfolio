@@ -17,42 +17,41 @@ export default function ExperiencePage() {
         <h2 className="text-2xl font-bold text-blue-400">Professional Experience</h2>
         
         <ExperienceCard
-          title="Software Developer"
+          title="GenAI Prompt Engineer"
           company="Telgoo5 Inc"
-          location="New York City"
+          location="New York City, NY"
           period="Mar 2025 – Aug 2025"
           achievements={[
-            "Engineered a configurable, rule-based enterprise platform for telecom service provisioning and order management, enabling dynamic workflow automation and integration with USPS APIs for address verification",
-            "Optimized a scalable, permission-driven SaaS architecture featuring hierarchical access controls and rule engines, reducing custom code dependencies and increasing 39% deployment agility",
-            "Introduced features like pagination, filtering, pdf generation, authentication, improving dashboard usability by 25%",
-            "Created a Support Case Ticketing System for customer issue tracking and escalation management, reducing average response time by 40% and improving cross-team visibility through automated status notifications",
-            "Integrated AI-assisted test automation to validate key workflows and perform regression checks, cutting QA cycle time by 35% and increasing defect detection accuracy"
-          ]}
-        />
-
-        <ExperienceCard
-          title="Software Engineer Intern"
-          company="Interview Buddies"
-          location="Arlington, TX"
-          period="Nov 2024 – Mar 2025"
-          achievements={[
-            "Built an AI-powered text extraction pipeline using PyPDF2 and Gemini API for structured resume parsing with 25% higher accuracy",
-            "Annotated 1,000+ resume samples to improve model readability and reduce format inconsistencies",
-            "Automated LaTeX PDF generator, reducing manual document processing from hours to minutes",
-            "Collaborated with QA team to refine AI responses through feedback-based evaluation loops"
+            "Integrated AI-assisted test automation and LLM-powered tooling (GitHub Copilot Chat, Poe) into the QA workflow, designing prompts that generate regression tests and adversarial edge-case scenarios, cutting QA cycle time by 35%",
+            "Optimized a permission-driven SaaS architecture and access rules so that AI copilots receive only role-appropriate context, lowering the risk of overexposed data and off-policy model behavior while increasing deployment agility by 39%",
+            "Built a Support Case Ticketing system that captured user issues and resolutions in consistent, structured text, enabling retrieval-augmented triage and reducing average response time by 40% while minimizing hallucinated suggestions"
           ]}
         />
 
         <ExperienceCard
           title="AI Engineer"
+          company="Interview Buddies"
+          location="Arlington, TX"
+          period="Nov 2024 – Mar 2025"
+          achievements={[
+            "Built an AI-powered resume processing pipeline in Python using PyPDF2 and Gemini API, iterating on system and few-shot prompts to improve structured field extraction accuracy by 25% and reduce hallucinated fields",
+            "Designed cleaning, normalization, and annotation scripts for 1,000+ resumes, producing high-quality labeled data used as ground truth for evaluating LLM extraction reliability and consistency",
+            "Automated LaTeX-based PDF generation using prompt-driven templates to map model outputs into recruiter-ready documents, transforming multi-hour manual creation into a near real-time workflow",
+            "Collaborated with QA and product teams to run human-in-the-loop evaluations of LLM outputs, building rubric-based scoring guides that informed prompt revisions, acceptance thresholds, and safety checks"
+          ]}
+        />
+
+        <ExperienceCard
+          title="LLM Engineer"
           company="University of Texas at Arlington"
           location="Arlington, TX"
-          period="Aug 2023 – Mar 2025"
+          period="July 2024 – Mar 2025"
           achievements={[
-            "Conducted research on fine-tuning general LLMs for medical use, leading to MedicoBot, an AI medical assistant, improving diagnostic accuracy by 18%",
-            "Implemented LoRA fine-tuning on Mistral-7B for clinical note summarization and evidence-based treatment generation",
-            "Designed evaluation prompts and benchmarking datasets to test reasoning, recall, and safety performance, enhancing model reliability",
-            "Constructed an LLM evaluation framework using APIs (ChatGPT, Claude, Gemini) to automatically detect jailbreaks and bias, improving safety analysis workflow by 40%"
+            "Conducted research on adapting general-purpose LLMs to medical use cases, designing task-specific prompts and evaluation protocols that led to MedicoBot, an AI medical assistant improving diagnostic accuracy by 18%",
+            "Implemented LoRA fine-tuning on Mistral-7B for clinical note summarization and evidence-based treatment suggestions, iterating on prompt templates to balance brevity, clinical completeness, and safety constraints",
+            "Designed extensive evaluation prompts and benchmarking datasets to test LLM reasoning, recall, and clinical safety, enabling robust comparisons across models, prompts, and fine-tuning strategies",
+            "Built an LLM evaluation framework that orchestrated multiple LLMs to automatically probe for jailbreak attempts, unsafe content, and bias patterns, increasing safety review throughput by 40% and strengthening red-teaming coverage",
+            "Analyzed failure modes such as hallucinated diagnoses and off-guideline recommendations, translating insights into improved prompts, refusals, and safety instructions"
           ]}
         />
 
