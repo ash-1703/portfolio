@@ -52,7 +52,7 @@ export default function Hero() {
         <div className="justify-self-center">
           {/* <div className="card p-2"> */}
             <Image
-              src="/images/aishwarya_prof.jpeg"
+                src="/images/aishwarya_prof.webp"
               alt="Aishwarya Tupe — Portrait"
               width={520}
               height={520}
