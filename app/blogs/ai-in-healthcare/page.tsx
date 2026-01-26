@@ -1,11 +1,19 @@
 import Link from "next/link";
 import { client } from "@/lib/sanity.client";
 
+type BlogListItem = {
+  slug: string;
+  date: string;
+  title: string;
+  excerpt: string;
+  readTime: string;
+};
+
 // Disable Next.js caching for this page
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
-async function getAIHealthcareBlogs() {
+async function getAIHealthcareBlogs(): Promise<BlogListItem[]> {
   return await client.fetch(`
     *[_type == "blogPost" && category == "ai-in-healthcare"] | order(date desc) {
       "slug": slug.current,
@@ -52,7 +60,7 @@ export default async function AIHealthcareBlogsPage() {
       {/* Blog List */}
       <section className="mx-auto max-w-4xl px-4 pb-20">
         <div className="space-y-6">
-          {blogs.map((blog, idx) => (
+          {blogs.map((blog: BlogListItem, idx: number) => (
             <Link
               key={idx}
               href={`/blogs/ai-in-healthcare/${blog.slug}`}

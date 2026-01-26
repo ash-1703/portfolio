@@ -43,7 +43,7 @@ export default async function CertificationsPage() {
       {/* Header */}
       <section className="mx-auto max-w-4xl px-4 pt-24 pb-12">
         <h1 className="text-4xl md:text-5xl font-bold mb-6">
-          Certifications & <span className="gradient-text">Formal Learning</span>
+          Certifications
         </h1>
         <p className="text-lg text-slate-200 max-w-3xl">
           Structured courses and certifications demonstrating commitment to interdisciplinary 
@@ -58,7 +58,7 @@ export default async function CertificationsPage() {
           <h2 className="text-3xl font-bold">Human-Centered AI in Healthcare</h2>
         </div>
         <div className="space-y-4">
-          {publicHealthCerts.map((cert, idx) => (
+          {publicHealthCerts.map((cert: any, idx: number) => (
             <div
               key={idx}
               className="border border-white/10 rounded-lg p-6 hover:border-cyan-500/30 transition-all"
@@ -102,7 +102,7 @@ export default async function CertificationsPage() {
           <h2 className="text-3xl font-bold">AI & Technology</h2>
         </div>
         <div className="space-y-4">
-          {aiTechCerts.map((cert, idx) => (
+          {aiTechCerts.map((cert: any, idx: number) => (
             <div
               key={idx}
               className="border border-white/10 rounded-lg p-6 hover:border-cyan-500/30 transition-all"
@@ -146,7 +146,7 @@ export default async function CertificationsPage() {
           <h2 className="text-3xl font-bold">In Progress</h2>
         </div>
         <div className="space-y-4">
-          {inProgressCourses.map((course, idx) => (
+          {inProgressCourses.map((course: any, idx: number) => (
             <div
               key={idx}
               className="border border-white/10 rounded-lg p-6 hover:border-cyan-500/30 transition-all"
