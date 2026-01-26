@@ -127,7 +127,7 @@ export default function ChatWidget() {
         >
           <div className="px-4 py-3 border-b border-white/10 flex items-center justify-between">
             <div className="font-semibold">Insight Agent</div>
-            <button onClick={() => setOpen(false)} className="text-slate-300 hover:text-white">×</button>
+            <button onClick={() => setOpen(false)} className="text-slate-200 hover:text-white">×</button>
           </div>
 
           <div className="flex-1 overflow-y-auto p-4 space-y-3">

@@ -7,15 +7,14 @@ export default function Hero() {
       <div className="absolute inset-0 -z-10 bg-hero-gradient opacity-20 blur-2xl"></div>
       <div className="grid md:grid-cols-2 gap-10 items-center">
         <div className="space-y-6">
-          <span className="inline-block rounded-full bg-blue-500/10 border border-blue-400/30 px-3 py-1 text-blue-300 text-xs tracking-wider">
+          <span className="inline-block rounded-full bg-blue-500/10 border border-blue-400/30 px-3 py-1 text-blue-200 text-xs tracking-wider">
             Full‑Stack • AI • Agents
           </span>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
-            Building practical <span className="text-blue-400">AI‑powered</span> products
+            Building <span className="text-blue-400">Human-Centered AI</span> for Healthcare
           </h1>
-          <p className="text-lg text-slate-300 max-w-prose">
-            I'm Aishwarya, a full‑stack engineer focused on Next.js, React, Python, and cloud.
-            I've built annotation platforms, EMR/health apps, and agents that automate workflows.
+          <p className="text-lg text-slate-200 max-w-prose">
+            I'm Aishwarya, a full‑stack engineer pursuing research. I build practical AI systems for healthcare, from EMR applications to clinical workflow agents, while exploring how to design technology that truly serves doctors and patients.
           </p>
           <div className="flex gap-3">
             <a 
@@ -53,11 +52,11 @@ export default function Hero() {
         <div className="justify-self-center">
           {/* <div className="card p-2"> */}
             <Image
-              src="/portfolio/images/aishwarya.jpg"
-              alt="Aishwarya Tupe — Graduation Portrait"
+              src="/images/aishwarya_prof.jpeg"
+              alt="Aishwarya Tupe — Portrait"
               width={520}
               height={520}
-              className="rounded-2xl object-cover"
+              className="rounded-2xl object-cover shadow-2xl ring-1 ring-white/10 hover:ring-blue-400/30 transition-all duration-300"
               priority
               quality={85}
               placeholder="blur"

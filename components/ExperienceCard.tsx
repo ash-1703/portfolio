@@ -19,7 +19,7 @@ export default function ExperienceCard({ title, company, location, period, achie
       </div>
       <ul className="space-y-2">
         {achievements.map((achievement, idx) => (
-          <li key={idx} className="text-slate-300 text-sm flex gap-2">
+          <li key={idx} className="text-slate-200 text-sm flex gap-2">
             <span className="text-blue-400 mt-1.5 flex-shrink-0">•</span>
             <span>{achievement}</span>
           </li>

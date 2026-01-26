@@ -7,7 +7,7 @@ export default function ExperiencePage() {
       {/* Header */}
       <section className="text-center space-y-4">
         <h1 className="text-4xl sm:text-5xl font-bold">Experience</h1>
-        <p className="text-lg text-slate-300 max-w-2xl mx-auto">
+        <p className="text-lg text-slate-200 max-w-2xl mx-auto">
           My journey building impactful products across healthcare, telecom, and AI
         </p>
       </section>
@@ -17,41 +17,45 @@ export default function ExperiencePage() {
         <h2 className="text-2xl font-bold text-blue-400">Professional Experience</h2>
         
         <ExperienceCard
-          title="GenAI Prompt Engineer"
+          title="Software Developer"
           company="Telgoo5 Inc"
           location="New York City, NY"
           period="Mar 2025 – Aug 2025"
           achievements={[
-            "Integrated AI-assisted test automation and LLM-powered tooling (GitHub Copilot Chat, Poe) into the QA workflow, designing prompts that generate regression tests and adversarial edge-case scenarios, cutting QA cycle time by 35%",
-            "Optimized a permission-driven SaaS architecture and access rules so that AI copilots receive only role-appropriate context, lowering the risk of overexposed data and off-policy model behavior while increasing deployment agility by 39%",
-            "Built a Support Case Ticketing system that captured user issues and resolutions in consistent, structured text, enabling retrieval-augmented triage and reducing average response time by 40% while minimizing hallucinated suggestions"
+            "Owned frontend implementation for 4 end-to-end dashboard workflows, from API contract definition to production UI.",
+            "Built reusable table, form, and modal components used across 8+ internal screens, reducing duplicate UI logic.",
+            "Integrated frontend with 10+ backend endpoints, handling pagination, filtering, error states, and empty states.",
+            "Implemented client-side validation and loading states that reduced user-reported UI errors during releases.",
+            "Reviewed and approved 30+ pull requests, focusing on readability, component structure, and edge cases.",
+            "Supported live production issues during releases, investigating frontend logs and API responses to identify root causes."
           ]}
         />
 
         <ExperienceCard
-          title="AI Engineer"
+          title="Software Engineer Intern"
           company="Interview Buddies"
           location="Arlington, TX"
           period="Nov 2024 – Mar 2025"
           achievements={[
-            "Built an AI-powered resume processing pipeline in Python using PyPDF2 and Gemini API, iterating on system and few-shot prompts to improve structured field extraction accuracy by 25% and reduce hallucinated fields",
-            "Designed cleaning, normalization, and annotation scripts for 1,000+ resumes, producing high-quality labeled data used as ground truth for evaluating LLM extraction reliability and consistency",
-            "Automated LaTeX-based PDF generation using prompt-driven templates to map model outputs into recruiter-ready documents, transforming multi-hour manual creation into a near real-time workflow",
-            "Collaborated with QA and product teams to run human-in-the-loop evaluations of LLM outputs, building rubric-based scoring guides that informed prompt revisions, acceptance thresholds, and safety checks"
+            "Processed and normalized data from 1,000+ documents used in automated workflows.",
+            "Designed and integrated 10+ REST API endpoints, supporting data ingestion, transformation, and retrieval.",
+            "Collaborated with 4 frontend engineers to resolve API edge cases and data mismatches during weekly release cycles.",
+            "Added validation checks covering 20+ common data edge cases, reducing manual cleanup work.",
+            "Wrote internal documentation covering API contracts and data assumptions used by frontend components."
           ]}
         />
 
         <ExperienceCard
           title="LLM Engineer"
-          company="University of Texas at Arlington"
+          company="University of Texas – Arlington"
           location="Arlington, TX"
           period="July 2024 – Mar 2025"
           achievements={[
-            "Conducted research on adapting general-purpose LLMs to medical use cases, designing task-specific prompts and evaluation protocols that led to MedicoBot, an AI medical assistant improving diagnostic accuracy by 18%",
-            "Implemented LoRA fine-tuning on Mistral-7B for clinical note summarization and evidence-based treatment suggestions, iterating on prompt templates to balance brevity, clinical completeness, and safety constraints",
-            "Designed extensive evaluation prompts and benchmarking datasets to test LLM reasoning, recall, and clinical safety, enabling robust comparisons across models, prompts, and fine-tuning strategies",
-            "Built an LLM evaluation framework that orchestrated multiple LLMs to automatically probe for jailbreak attempts, unsafe content, and bias patterns, increasing safety review throughput by 40% and strengthening red-teaming coverage",
-            "Analyzed failure modes such as hallucinated diagnoses and off-guideline recommendations, translating insights into improved prompts, refusals, and safety instructions"
+            "Crafted task-specific prompts and evaluation protocols for MedicoBot and tested them on 150+ de-identified clinical cases, outperforming the base model’s diagnostic suggestions.",
+            "Applied LoRA fine-tuning to Mistral-7B for clinical note summaries, reviewing dozens of notes per version against clinician-style checklists for missing or unsafe content.",
+            "Created evaluation datasets covering 5+ specialties to compare reasoning, recall, and clinical safety across base and fine-tuned models.",
+            "Built an LLM evaluation framework that runs hundreds of jailbreaks and bias probes in a single batch across multiple models and flags risky outputs for review.",
+            "Logged and clustered dozens of hallucinated diagnoses and off-guideline advice cases and updated prompts and safety instructions to remove recurring issues in later test runs."
           ]}
         />
 

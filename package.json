@@ -10,9 +10,16 @@
     "deploy": "next build && gh-pages -d out --dotfiles"
   },
   "dependencies": {
+    "@portabletext/react": "^6.0.2",
+    "@sanity/icons": "^3.7.4",
+    "@sanity/image-url": "^1.2.0",
+    "@sanity/vision": "^3.99.0",
     "next": "14.2.12",
+    "next-sanity": "^9.12.3",
     "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "react-dom": "18.3.1",
+    "sanity": "^3.99.0",
+    "styled-components": "^6.3.8"
   },
   "devDependencies": {
     "@types/node": "24.10.0",
@@ -22,6 +29,7 @@
     "eslint-config-next": "14.2.12",
     "gh-pages": "^6.3.0",
     "postcss": "8.4.47",
+    "sharp": "^0.34.5",
     "tailwindcss": "3.4.13",
     "typescript": "5.6.3"
   }

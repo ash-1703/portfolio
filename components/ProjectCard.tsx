@@ -12,12 +12,12 @@ export default function ProjectCard({ title, tags, description, link, repo }: Pr
       <div className="flex items-start justify-between gap-4">
         <div>
           <h3 className="text-xl font-semibold">{title}</h3>
-          <p className="text-slate-300 mt-2">{description}</p>
+          <p className="text-slate-200 mt-2">{description}</p>
         </div>
       </div>
       <div className="mt-4 flex flex-wrap gap-2">
         {tags.map((t) => (
-          <span key={t} className="text-xs px-2 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300">
+          <span key={t} className="text-xs px-2 py-1 rounded-full bg-white/5 border border-white/10 text-slate-200">
             {t}
           </span>
         ))}
