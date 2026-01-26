@@ -5,7 +5,7 @@ export default function AboutPage() {
     <section className="py-16 grid md:grid-cols-[1fr,1.3fr] gap-10 items-start">
       <div className="flex justify-center md:justify-start">
         <Image
-          src="/images/aishwarya_prof.jpeg"
+          src="/images/aishwarya_prof.webp"
           alt="Aishwarya Tupe portrait"
           width={400}
           height={400}
