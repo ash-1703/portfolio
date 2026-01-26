@@ -5,7 +5,15 @@ import { client } from "@/lib/sanity.client";
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
-async function getResponsibleAIBlogs() {
+type BlogListItem = {
+  slug: string;
+  date: string;
+  title: string;
+  excerpt: string;
+  readTime: string;
+};
+
+async function getResponsibleAIBlogs(): Promise<BlogListItem[]> {
   return await client.fetch(`
     *[_type == "blogPost" && category == "responsible-ai"] | order(date desc) {
       "slug": slug.current,
@@ -53,7 +61,7 @@ export default async function ResponsibleAIBlogsPage() {
       <section className="mx-auto max-w-4xl px-4 pb-20">
         {blogs.length > 0 ? (
           <div className="space-y-6">
-            {blogs.map((blog, idx) => (
+            {blogs.map((blog: BlogListItem, idx: number) => (
               <Link
                 key={idx}
                 href={`/blogs/responsible-ai/${blog.slug}`}

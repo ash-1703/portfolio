@@ -5,7 +5,15 @@ import { client } from "@/lib/sanity.client";
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
-async function getClinicalIntegrationBlogs() {
+type BlogListItem = {
+  slug: string;
+  date: string;
+  title: string;
+  excerpt: string;
+  readTime: string;
+};
+
+async function getClinicalIntegrationBlogs(): Promise<BlogListItem[]> {
   return await client.fetch(`
     *[_type == "blogPost" && category == "clinical-integration"] | order(date desc) {
       "slug": slug.current,
@@ -52,7 +60,7 @@ export default async function ClinicalIntegrationBlogsPage() {
       {/* Blog List */}
       <section className="mx-auto max-w-4xl px-4 pb-20">
         <div className="space-y-6">
-          {blogs.map((blog, idx) => (
+          {blogs.map((blog: BlogListItem, idx: number) => (
             <Link
               key={idx}
               href={`/blogs/clinical-integration/${blog.slug}`}

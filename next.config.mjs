@@ -1,20 +1,17 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig = {
-  // Only use static export for production builds
-  ...(process.env.NODE_ENV === 'production' && {
-    output: 'export',
-    basePath: '/portfolio',
-    assetPrefix: '/portfolio',
-  }),
-  trailingSlash: true,
+  // Vercel-friendly config (server build, no static export, no basePath)
   images: {
-    unoptimized: true,
+    unoptimized: false,
   },
   compress: true,
   poweredByHeader: false,
   reactStrictMode: true,
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
+    removeConsole: isProd,
   },
 };
+
 export default nextConfig;

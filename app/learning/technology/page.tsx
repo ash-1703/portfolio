@@ -5,7 +5,14 @@ import { client } from "@/lib/sanity.client";
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
-async function getTechnologyEntries() {
+type LearningListItem = {
+  title: string;
+  slug: string;
+  date: string;
+  description: string;
+};
+
+async function getTechnologyEntries(): Promise<LearningListItem[]> {
   return await client.fetch(`
     *[_type == "technologyLearning"] | order(date desc) {
       title,
@@ -38,7 +45,7 @@ export default async function TechnologyLearningPage() {
       {/* Learning Entries List */}
       <section className="mx-auto max-w-4xl px-4 pb-20">
         <div className="space-y-6">
-          {learningEntries.map((entry, idx) => (
+          {learningEntries.map((entry: LearningListItem, idx: number) => (
             <Link
               key={idx}
               href={`/learning/technology/${entry.slug}`}

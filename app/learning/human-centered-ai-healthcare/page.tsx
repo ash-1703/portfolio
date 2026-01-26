@@ -5,7 +5,15 @@ import { client } from "@/lib/sanity.client";
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
-async function getPublicHealthEntries() {
+type LearningListItem = {
+  title: string;
+  slug: string;
+  date: string;
+  description: string;
+  source: string;
+};
+
+async function getPublicHealthEntries(): Promise<LearningListItem[]> {
   const entries = await client.fetch(`
     *[_type == "publicHealthLearning"] | order(date desc) {
       title,
@@ -43,7 +51,7 @@ export default async function PublicHealthLearningPage() {
       {/* Learning Entries List */}
       <section className="mx-auto max-w-4xl px-4 pb-20">
         <div className="space-y-6">
-          {learningEntries.map((entry, idx) => (
+          {learningEntries.map((entry: LearningListItem, idx: number) => (
             <Link
               key={idx}
               href={`/learning/human-centered-ai-healthcare/${entry.slug}`}

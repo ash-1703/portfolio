@@ -5,6 +5,16 @@ import { client } from "@/lib/sanity.client";
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
+type FeaturedBlog = {
+  slug: string;
+  category: string;
+  date: string;
+  title: string;
+  excerpt: string;
+  readTime: string;
+  categorySlug: string;
+};
+
 async function getBlogStats() {
   return await client.fetch(`{
     "designUX": count(*[_type == "blogPost" && category == "design-and-ux"]),
@@ -22,12 +32,14 @@ async function getBlogStats() {
   }`);
 }
 
-  const categoryNames: Record<string, string> = {
-  'design-and-ux': 'Design & UX',
-  'ethics-and-equity': 'Ethics & Equity',
-  'clinical-integration': 'Clinical Integration',
-  'patient-outcomes': 'Patient Outcomes',
-};export default async function BlogsPage() {
+const categoryNames: Record<string, string> = {
+  "design-and-ux": "Design & UX",
+  "ethics-and-equity": "Ethics & Equity",
+  "clinical-integration": "Clinical Integration",
+  "patient-outcomes": "Patient Outcomes",
+};
+
+export default async function BlogsPage() {
   const stats = await getBlogStats();
 
   const blogCategories = [
@@ -62,7 +74,7 @@ async function getBlogStats() {
   ];
 
   // Featured/Latest blogs from Sanity
-  const featuredBlogs = stats.featured.map((blog: any) => ({
+  const featuredBlogs: FeaturedBlog[] = stats.featured.map((blog: any) => ({
     slug: blog.slug,
     category: categoryNames[blog.category],
     date: blog.date,
@@ -90,7 +102,7 @@ async function getBlogStats() {
       <section className="mx-auto max-w-4xl px-4 pb-12">
         <h2 className="text-2xl font-bold mb-6">Latest Posts</h2>
         <div className="space-y-6">
-          {featuredBlogs.map((blog, idx) => (
+          {featuredBlogs.map((blog: FeaturedBlog, idx: number) => (
             <Link
               key={idx}
               href={`/blogs/${blog.categorySlug}/${blog.slug}`}
