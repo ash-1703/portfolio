@@ -28,6 +28,53 @@ export default function Page() {
         </div>
       </section>
 
+      {/* AI Enablement / Communication */}
+      <section className="py-16">
+        <div className="card p-8">
+          <div className="flex items-start justify-between gap-6 flex-wrap">
+            <div className="max-w-3xl">
+              <h2 className="text-3xl font-bold">
+                AI enablement & Communication 
+              </h2>
+              <p className="text-slate-200 mt-3">
+                I bridge technical and non‑technical teams by turning messy real‑world needs into safe, repeatable AI workflows.
+                My style is hands‑on: quick workshops, office hours, and practical playbooks people actually reuse.
+              </p>
+            </div>
+            <div className="flex gap-3">
+              <Link href="/about" className="btn">My approach</Link>
+              <Link
+                href="#contact"
+                className="inline-flex items-center rounded-2xl px-4 py-2 border border-white/15 hover:border-white/30 transition"
+              >
+                Contact
+              </Link>
+            </div>
+          </div>
+
+          <div className="mt-8 grid md:grid-cols-3 gap-4">
+            <div className="border border-white/10 rounded-xl p-5">
+              <h3 className="font-semibold">Workshops & Coaching</h3>
+              <p className="text-slate-200 text-sm mt-2">
+                Interactive sessions for teams using ChatGPT / Copilot / Gemini: writing, research, and workflow automation.
+              </p>
+            </div>
+            <div className="border border-white/10 rounded-xl p-5">
+              <h3 className="font-semibold">Prompt Libraries & Playbooks</h3>
+              <p className="text-slate-200 text-sm mt-2">
+                Structured guides: reusable prompts, guardrails, and examples tailored to real roles and documents.
+              </p>
+            </div>
+            <div className="border border-white/10 rounded-xl p-5">
+              <h3 className="font-semibold">Custom Agents</h3>
+              <p className="text-slate-200 text-sm mt-2">
+                Lightweight RAG systems and agents with evaluation so outputs stay grounded, transparent, and useful.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="projects" className="py-16 space-y-8">
         <h2 className="text-3xl font-bold">Highlighted Projects</h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-6">

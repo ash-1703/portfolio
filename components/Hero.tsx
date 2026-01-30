@@ -8,15 +8,29 @@ export default function Hero() {
       <div className="grid md:grid-cols-2 gap-10 items-center">
         <div className="space-y-6">
           <span className="inline-block rounded-full bg-blue-500/10 border border-blue-400/30 px-3 py-1 text-blue-200 text-xs tracking-wider">
-            Full‑Stack • AI • Agents
+            Full‑Stack • AI Integration • Human‑Centered AI
           </span>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
-            Building <span className="text-blue-400">Human-Centered AI</span> for Healthcare
+            Building <span className="text-blue-400">Human‑Centered AI</span> and Full‑Stack systems 
           </h1>
           <p className="text-lg text-slate-200 max-w-prose">
-            I'm Aishwarya, a full‑stack engineer pursuing research. I build practical AI systems for healthcare, from EMR applications to clinical workflow agents, while exploring how to design technology that truly serves doctors and patients.
+            I’m Aishwarya, a full‑stack engineer who integrates AI into real products (RAG, agents, evaluation) with a focus on trust, usability, and real‑world workflows. I also love translating “AI jargon” into clear playbooks and coaching so non‑technical teams can use GenAI responsibly.
           </p>
           <div className="flex gap-3">
+            <Link
+              href="#projects"
+              className="btn"
+              aria-label="View highlighted projects"
+            >
+              View Projects
+            </Link>
+            <Link
+              href="/about"
+              className="inline-flex items-center rounded-2xl px-4 py-2 border border-white/15 hover:border-white/30 transition text-sm"
+              aria-label="Learn more about Aishwarya"
+            >
+              How I work
+            </Link>
             <a 
               href="https://www.linkedin.com/in/aishwarya-tupe/" 
               target="_blank" 

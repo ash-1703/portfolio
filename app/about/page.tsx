@@ -15,15 +15,12 @@ export default function AboutPage() {
       <div className="space-y-5">
         <h1 className="text-3xl font-bold">About Me</h1>
         <p className="text-slate-200">
-          I'm Aishwarya Tupe, a full-stack engineer pursuing research in human-centered AI for healthcare. 
-          I build practical systems, from EMR applications to clinical workflow agents, while exploring how to 
-          design AI that clinicians trust, patients understand, and healthcare systems can actually adopt.
+          I'm Aishwarya Tupe, a full‑stack engineer focused on human‑centered AI for healthcare.
+          I build end‑to‑end products (frontend, backend, data, and cloud) and I integrate AI where it actually helps: RAG search, lightweight agents, and evaluation that keeps outputs grounded.
         </p>
         <p className="text-slate-200">
-          My work spans the technical and the human: implementing RAG systems and evaluation pipelines, 
-          while investigating questions around explainability, fairness, and real-world clinical integration. 
-          I'm preparing for PhD work by systematically building knowledge across design, ethics, and 
-          healthcare AI implementation.
+          What I’m most proud of is bridging the gap between technical and non‑technical teams.
+          I enjoy running workshops, building prompt libraries/playbooks, and translating AI capabilities into clear, safe workflows people can use every day, especially for high‑stakes domains like healthcare.
         </p>
 
         {/* Skills */}
