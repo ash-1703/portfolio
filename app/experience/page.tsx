@@ -17,76 +17,57 @@ export default function ExperiencePage() {
         <h2 className="text-2xl font-bold text-blue-400">Professional Experience</h2>
         
         <ExperienceCard
-          title="GenAI Engineer"
+          title="Software Developer"
           company="Telgoo5 Inc"
           location="New York City, NY"
           period="Mar 2025 – Aug 2025"
           achievements={[
-            "Designed and delivered AI tool training and enablement materials (user guides, evaluation rubrics, prompt templates, and workflow documentation) to support adoption of AI systems across QA and support teams.",
-            "Conducted hands-on coaching and one-on-one support for team members using AI-assisted tools, translating complex LLM behavior into practical, role-specific guidance.",
-            "Served as a primary reviewer and advisor for ~120 AI-generated outputs per week, evaluating accuracy, hallucinations, tone, and instruction adherence, and providing actionable feedback to improve user trust and adoption.",
-            "Developed 10+ standardized evaluation rubrics and training frameworks, improving cross-team consistency and accelerating onboarding for new users and reviewers.",
-            "Identified recurring AI failure patterns and converted them into training updates, FAQs, and regression scenarios, reducing repeated user issues and support requests.",
-            "Partnered with cross-functional stakeholders to align AI usage guidelines, ensuring consistent support experiences and responsible AI adoption.",
-            "Owned frontend implementation for 4 end-to-end dashboard workflows, from API contract definition to production UI.",
-            "Built reusable table, form, and modal components used across 8+ internal screens, reducing duplicate UI logic.",
-            "Integrated frontend with 10+ backend endpoints, handling pagination, filtering, error states, and empty states.",
-            "Implemented client-side validation and loading states that reduced user-reported UI errors during releases.",
-            "Reviewed and approved 30+ pull requests, focusing on readability, component structure, and edge cases.",
-            "Supported live production issues during releases, investigating frontend logs and API responses to identify root causes."
+            "Designed, tested, and shipped 15+ React + TypeScript components used in production dashboards, reducing user task completion time by ~40%.",
+            "Built and maintained modular UI and API integrations, improving scalability and reducing repeated custom requests by ~30%.",
+            "Collaborated with backend services and SQL databases to optimize data retrieval, improving page load times by 180–300ms.",
+            "Troubleshot UI, API, and permission issues across browsers and environments, reducing support tickets by ~20%.",
+            "Partnered with QA to validate fixes, document workflows, and ensure continued functionality during releases.",
+            "Contributed to 10+ production deployments using Git-based CI/CD pipelines with minimal rollbacks."
           ]}
         />
 
         <ExperienceCard
-          title="AI Engineer"
+          title="Software Engineer Intern"
           company="Interview Buddies"
           location="Arlington, TX"
           period="Nov 2024 – Mar 2025"
           achievements={[
-            "Supported AI onboarding and training initiatives by preparing structured datasets, examples, and annotated outputs used for demonstrations and evaluator training.",
-            "Reviewed and audited 300+ AI-generated outputs, scoring clarity, factual accuracy, and formatting, and translating findings into clear training guidance for annotators and reviewers.",
-            "Authored step-by-step annotation and evaluation guidelines, enabling new team members to reach quality benchmarks within two weeks.",
-            "Provided ongoing user support and troubleshooting for AI-assisted workflows, identifying common issues and recommending process improvements.",
-            "Collaborated with internal teams to refine AI workflows based on user feedback, improving consistency and reducing rework by ~20%.",
-            "Processed and normalized data from 1,000+ documents used in automated workflows.",
-            "Designed and integrated 10+ REST API endpoints, supporting data ingestion, transformation, and retrieval.",
-            "Collaborated with 4 frontend engineers to resolve API edge cases and data mismatches during weekly release cycles.",
-            "Added validation checks covering 20+ common data edge cases, reducing manual cleanup work.",
-            "Wrote internal documentation covering API contracts and data assumptions used by frontend components."
+            "Developed Python-based services to parse, validate, and normalize structured data consumed by frontend applications.",
+            "Built and consumed REST APIs to automate document generation and data workflows.",
+            "Improved backend data accuracy and reliability, reducing manual intervention by ~35%.",
+            "Collaborated with frontend and QA teams to debug parsing and API edge cases in production workflows."
           ]}
         />
 
         <ExperienceCard
-          title="LLM Engineer"
+          title="Software Engineer"
           company="University of Texas – Arlington"
           location="Arlington, TX"
           period="July 2024 – Mar 2025"
           achievements={[
-            "Evaluated and reviewed 300+ AI-generated clinical summaries, focusing on reasoning quality, factual accuracy, and adherence to domain guidelines.",
-            "Developed training rubrics and quality standards to support consistent AI output review and user understanding of model limitations.",
-            "Reduced unsafe or hallucinated outputs by ~18% by translating evaluation findings into updated training materials and usage guidance.",
-            "Created instructional documentation explaining AI behavior, limitations, and best practices for non-technical users participating in evaluation workflows.",
-            "Crafted task-specific prompts and evaluation protocols for MedicoBot and tested them on 150+ de-identified clinical cases, outperforming the base model’s diagnostic suggestions.",
-            "Applied LoRA fine-tuning to Mistral-7B for clinical note summaries, reviewing dozens of notes per version against clinician-style checklists for missing or unsafe content.",
-            "Created evaluation datasets covering 5+ specialties to compare reasoning, recall, and clinical safety across base and fine-tuned models.",
-            "Built an LLM evaluation framework that runs hundreds of jailbreaks and bias probes in a single batch across multiple models and flags risky outputs for review.",
-            "Logged and clustered dozens of hallucinated diagnoses and off-guideline advice cases and updated prompts and safety instructions to remove recurring issues in later test runs."
+            "Built and maintained 3 internal React dashboards connected to Python APIs to support research and evaluation workflows.",
+            "Developed backend services to process and store results from 500+ evaluation runs in SQL-backed data stores.",
+            "Investigated and resolved 30+ UI bugs, API timeouts, and data consistency issues during weekly development cycles.",
+            "Created setup guides and system documentation used to onboard 4 new research assistants and support ongoing maintenance."
           ]}
         />
 
         <ExperienceCard
           title="Software Developer (Full Stack)"
           company="Dr Tupe Skin and Hair Clinic"
-          location="India"
-          period="June 2021 – June 2022"
+          location="Mumbai, IN"
+          period="Jan 2021 – Jun 2022"
           achievements={[
-            "Led end-user onboarding and training for internal technology platforms supporting scheduling, patient records, and billing.",
-            "Provided day-to-day technical support to clinic staff, resolving issues and adapting tools based on real-world workflow needs.",
-            "Created user documentation and walkthroughs that improved system usability and reduced support requests.",
-            "Partnered directly with non-technical users to understand pain points and translate them into system improvements.",
-            "Built 5 custom RESTful APIs using Node.js, Express, and MongoDB, enabling seamless backend functionality for appointments, payments, and user authentication",
-            "Increased user engagement by 40% by redesigning the homepage, appointment scheduling, and testimonials section using React, HTML, CSS, and JavaScript",
-            "Implemented lazy loading, code splitting, image compression (WebP), and Webpack minification, improving user experience, reducing website loading time by 30%"
+            "Built and maintained internal web tools supporting patient records, appointments, and billing for a clinic handling 20–30 visits per day.",
+            "Developed frontend interfaces using JavaScript, HTML, and CSS used daily by 6 clinic staff members.",
+            "Implemented backend logic and SQL-based storage for 1,500+ patient visits, treatments, and payment records.",
+            "Worked directly with clinic staff to gather requirements and resolve 40+ workflow and data issues over time.",
+            "Performed regular maintenance, bug fixes, and data updates to ensure uninterrupted system availability."
           ]}
         />
 
