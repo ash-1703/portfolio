@@ -48,12 +48,12 @@ export default async function PublicHealthPostPage({ params }: { params: { slug:
       <section className="mx-auto max-w-3xl px-4 pt-8">
         <Link 
           href="/learning/human-centered-ai-healthcare"
-          className="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm mb-8"
+          className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm mb-8"
         >
           <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
-          Back to Human-Centered AI in Healthcare
+          Back to System Design & Architecture
         </Link>
       </section>
 
@@ -88,11 +88,11 @@ export default async function PublicHealthPostPage({ params }: { params: { slug:
           
           {/* Key Takeaways Section */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold mb-4 text-cyan-400">Key Takeaways</h2>
+            <h2 className="text-2xl font-bold mb-4 text-blue-400">Key Takeaways</h2>
             <ul className="space-y-4 text-slate-200">
               {entry.takeaways.map((takeaway, i) => (
                 <li key={i} className="flex gap-3">
-                  <span className="text-cyan-500 mt-1.5 font-bold">•</span>
+                  <span className="text-blue-400 mt-1.5 font-bold">•</span>
                   <div>
                     <strong>{takeaway.title}</strong>
                     <p className="mt-2 text-slate-400">
@@ -106,8 +106,8 @@ export default async function PublicHealthPostPage({ params }: { params: { slug:
 
           {/* Reflection Section */}
           {entry.reflection && (
-            <section className="border-l-4 border-cyan-500 pl-8 py-6 bg-cyan-500/5 rounded-r mb-12">
-              <h2 className="text-xl font-bold mb-4 text-cyan-400">💭 Reflection</h2>
+            <section className="border-l-4 border-blue-400 pl-8 py-6 bg-blue-500/5 rounded-r mb-12">
+              <h2 className="text-xl font-bold mb-4 text-blue-400">💭 Reflection</h2>
               <p className="text-slate-200 leading-relaxed">
                 {entry.reflection}
               </p>
@@ -132,9 +132,9 @@ export default async function PublicHealthPostPage({ params }: { params: { slug:
         <div className="mt-16 pt-8 border-t border-white/10 flex justify-between items-center">
           <Link 
             href="/learning/human-centered-ai-healthcare"
-            className="text-cyan-400 hover:text-cyan-300 text-sm"
+            className="text-blue-400 hover:text-blue-300 text-sm"
           >
-            ← All Human-Centered AI in Healthcare Posts
+            ← All System Design & Architecture Posts
           </Link>
         </div>
       </article>

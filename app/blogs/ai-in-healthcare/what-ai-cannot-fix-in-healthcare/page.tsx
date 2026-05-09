@@ -7,7 +7,7 @@ export default function WhatAICannotFixPost() {
       <section className="mx-auto max-w-3xl px-4 pt-8">
         <Link 
           href="/blogs/ai-in-healthcare"
-          className="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm mb-8"
+          className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm mb-8"
         >
           <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -21,7 +21,7 @@ export default function WhatAICannotFixPost() {
         {/* Header */}
         <div className="mb-8">
           <div className="flex items-center gap-3 text-sm text-slate-400 mb-4">
-            <span className="px-2 py-1 bg-cyan-500/10 text-cyan-400 rounded text-xs font-medium">
+            <span className="px-2 py-1 bg-blue-500/10 text-blue-400 rounded text-xs font-medium">
               AI in Healthcare
             </span>
             <span>•</span>
@@ -68,19 +68,19 @@ export default function WhatAICannotFixPost() {
 
           <h2 className="text-2xl font-bold text-white mt-8 mb-4">What AI Cannot Fix</h2>
 
-          <h3 className="text-xl font-semibold text-cyan-400 mt-6 mb-3">1. Lack of Access</h3>
+          <h3 className="text-xl font-semibold text-blue-400 mt-6 mb-3">1. Lack of Access</h3>
 
           <p>
             An AI model that accurately diagnoses pneumonia from chest X-rays is useless if patients 
             can't afford the X-ray. Or the clinic visit. Or the antibiotics.
           </p>
 
-          <blockquote className="border-l-4 border-cyan-500 pl-6 py-2 bg-cyan-500/5 italic">
+          <blockquote className="border-l-4 border-blue-400 pl-6 py-2 bg-blue-500/5 italic">
             "In the U.S., 45% of adults report delaying or skipping medical care due to cost 
             (KFF, 2023). No algorithm can fix affordability."
           </blockquote>
 
-          <h3 className="text-xl font-semibold text-cyan-400 mt-6 mb-3">2. Social Determinants of Health</h3>
+          <h3 className="text-xl font-semibold text-blue-400 mt-6 mb-3">2. Social Determinants of Health</h3>
 
           <p>
             AI can predict that someone living in a food desert with unstable housing is at high 
@@ -98,7 +98,7 @@ export default function WhatAICannotFixPost() {
             <strong>Prediction without intervention is surveillance, not care.</strong>
           </p>
 
-          <h3 className="text-xl font-semibold text-cyan-400 mt-6 mb-3">3. Systemic Bias</h3>
+          <h3 className="text-xl font-semibold text-blue-400 mt-6 mb-3">3. Systemic Bias</h3>
 
           <p>
             AI models inherit the biases in their training data. If historical data shows that 
@@ -111,7 +111,7 @@ export default function WhatAICannotFixPost() {
             anti-bias training, and accountability mechanisms—none of which are machine learning problems.
           </p>
 
-          <h3 className="text-xl font-semibold text-cyan-400 mt-6 mb-3">4. Trust and Human Connection</h3>
+          <h3 className="text-xl font-semibold text-blue-400 mt-6 mb-3">4. Trust and Human Connection</h3>
 
           <p>
             A patient-doctor relationship is built on trust, empathy, and shared decision-making. 
@@ -162,28 +162,28 @@ export default function WhatAICannotFixPost() {
             of what it can and cannot achieve.
           </p>
 
-          <h3 className="text-xl font-semibold text-cyan-400 mt-6 mb-3">Design AI as a Tool, Not a Solution</h3>
+          <h3 className="text-xl font-semibold text-blue-400 mt-6 mb-3">Design AI as a Tool, Not a Solution</h3>
 
           <p>
             AI should augment clinicians, not replace them. It should surface insights that humans 
             can act on—but the action itself requires policy, funding, and systemic change.
           </p>
 
-          <h3 className="text-xl font-semibold text-cyan-400 mt-6 mb-3">Pair Technology with Policy</h3>
+          <h3 className="text-xl font-semibold text-blue-400 mt-6 mb-3">Pair Technology with Policy</h3>
 
           <p>
             If you build a model that predicts housing insecurity as a health risk, <strong>also advocate 
             for housing policy</strong>. Technology + advocacy {`>`} technology alone.
           </p>
 
-          <h3 className="text-xl font-semibold text-cyan-400 mt-6 mb-3">Center Equity, Not Just Accuracy</h3>
+          <h3 className="text-xl font-semibold text-blue-400 mt-6 mb-3">Center Equity, Not Just Accuracy</h3>
 
           <p>
             A model that's 95% accurate overall but 70% accurate for marginalized groups is a failure. 
             Evaluate fairness metrics alongside performance metrics.
           </p>
 
-          <h3 className="text-xl font-semibold text-cyan-400 mt-6 mb-3">Ask "Who Benefits?"</h3>
+          <h3 className="text-xl font-semibold text-blue-400 mt-6 mb-3">Ask "Who Benefits?"</h3>
 
           <p>
             Does this AI tool primarily benefit patients, or does it optimize hospital revenue? 
@@ -212,7 +212,7 @@ export default function WhatAICannotFixPost() {
           <div className="mt-6 flex justify-between items-center">
             <Link 
               href="/blogs/ai-in-healthcare"
-              className="text-cyan-400 hover:text-cyan-300 text-sm"
+              className="text-blue-400 hover:text-blue-300 text-sm"
             >
               ← All AI in Healthcare Posts
             </Link>

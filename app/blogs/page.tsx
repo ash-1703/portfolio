@@ -33,10 +33,10 @@ async function getBlogStats() {
 }
 
 const categoryNames: Record<string, string> = {
-  "design-and-ux": "Design & UX",
-  "ethics-and-equity": "Ethics & Equity",
-  "clinical-integration": "Clinical Integration",
-  "patient-outcomes": "Patient Outcomes",
+  "design-and-ux": "System Design",
+  "ethics-and-equity": "Algorithms",
+  "clinical-integration": "Engineering Craft",
+  "patient-outcomes": "AI & LLM Engineering",
 };
 
 export default async function BlogsPage() {
@@ -44,30 +44,30 @@ export default async function BlogsPage() {
 
   const blogCategories = [
     {
-      title: "Design & User Experience in Healthcare AI",
-      description: "Empathetic, usable, and trustworthy AI tools for patients and clinicians",
-      icon: "🎨",
+      title: "System Design & Architecture",
+      description: "Distributed systems, scalability trade-offs, database design, and production architecture.",
+      icon: "�️",
       slug: "design-and-ux",
       postCount: stats.designUX,
     },
     {
-      title: "Ethics, Fairness, and Equity in Healthcare AI",
-      description: "Responsible AI, algorithmic bias, health equity, and protecting vulnerable populations",
-      icon: "⚖️",
+      title: "Algorithms & Problem Solving",
+      description: "DSA patterns, LeetCode breakdowns, and how algorithmic thinking applies to real engineering.",
+      icon: "🧩",
       slug: "ethics-and-equity",
       postCount: stats.ethicsEquity,
     },
     {
-      title: "Clinical Integration and Workflow Adoption",
-      description: "Moving AI from research to real-world use in hospitals and clinics",
-      icon: "🏥",
+      title: "Engineering Craft",
+      description: "Code quality, testing, refactoring, CI/CD, and becoming a sharper developer.",
+      icon: "⚙️",
       slug: "clinical-integration",
       postCount: stats.clinicalIntegration,
     },
     {
-      title: "AI for Patient Safety, Outcomes, and Health Challenges",
-      description: "Direct applications that improve health results and save lives",
-      icon: "🩺",
+      title: "AI & LLM Engineering",
+      description: "Prompt engineering, RAG pipelines, model evaluation, and AI in production.",
+      icon: "�",
       slug: "patient-outcomes",
       postCount: stats.patientOutcomes,
     },
@@ -91,10 +91,8 @@ export default async function BlogsPage() {
         <h1 className="text-4xl md:text-5xl font-bold mb-6">
           <span className="gradient-text">Blogs</span>
         </h1>
-        <p className="text-lg text-slate-200 max-w-3xl mb-8">
-          Polished essays and thought leadership on human-centered AI in healthcare. 
-          Unlike my daily learning logs, these are curated, longer-form 
-          pieces meant for sharing and discussion.
+        <p className="text-lg text-slate-400 max-w-2xl mb-8">
+          Long-form writing on engineering craft, system design, and building better software. Curated posts meant for sharing.
         </p>
       </section>
 
@@ -106,11 +104,11 @@ export default async function BlogsPage() {
             <Link
               key={idx}
               href={`/blogs/${blog.categorySlug}/${blog.slug}`}
-              className="block border border-white/10 rounded-lg p-6 hover:border-cyan-500/50 transition-all hover:shadow-lg hover:shadow-cyan-500/10 group"
+              className="block border border-white/10 rounded-lg p-6 hover:border-blue-400/40 transition-all hover:shadow-lg hover:shadow-blue-500/10 group"
             >
               {/* Category & Date */}
               <div className="flex items-center gap-3 text-sm text-slate-400 mb-3">
-                <span className="px-2 py-1 bg-cyan-500/10 text-cyan-400 rounded text-xs font-medium">
+                <span className="px-2 py-1 bg-blue-500/10 text-blue-400 rounded text-xs font-medium">
                   {blog.category}
                 </span>
                 <span>•</span>
@@ -130,7 +128,7 @@ export default async function BlogsPage() {
               </p>
 
               {/* Read More */}
-              <span className="flex items-center text-cyan-400 text-sm font-medium">
+              <span className="flex items-center text-blue-400 text-sm font-medium">
                 Read full post
                 <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -149,7 +147,7 @@ export default async function BlogsPage() {
             <Link
               key={idx}
               href={`/blogs/${category.slug}`}
-              className="group border border-white/10 rounded-lg p-6 hover:border-cyan-500/50 transition-all hover:shadow-lg hover:shadow-cyan-500/10"
+              className="group border border-white/10 rounded-lg p-6 hover:border-blue-400/40 transition-all hover:shadow-lg hover:shadow-blue-500/10"
             >
               <div className="flex items-start gap-4">
                 <span className="text-4xl">{category.icon}</span>
@@ -164,7 +162,7 @@ export default async function BlogsPage() {
                     {category.postCount} {category.postCount === 1 ? 'post' : 'posts'}
                   </span>
                 </div>
-                <svg className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-blue-400 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </div>

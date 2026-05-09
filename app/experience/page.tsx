@@ -8,7 +8,7 @@ export default function ExperiencePage() {
       <section className="text-center space-y-4">
         <h1 className="text-4xl sm:text-5xl font-bold">Experience</h1>
         <p className="text-lg text-slate-200 max-w-2xl mx-auto">
-          Full‑Stack Delivery + Responsible AI Integration 
+          Full Stack Delivery + Responsible AI Integration 
         </p>
       </section>
 

@@ -2,153 +2,115 @@ import Link from "next/link";
 
 export default function MissionPage() {
   return (
-    <div className="py-12 space-y-16 max-w-4xl mx-auto">
+    <div className="py-16 space-y-20 max-w-3xl mx-auto">
+
       {/* Header */}
-      <section className="text-center space-y-4">
+      <section className="space-y-3">
         <h1 className="text-4xl sm:text-5xl font-bold">Mission & Values</h1>
-        <p className="text-lg text-slate-200">
-          What drives me and how I approach building products
+        <p className="text-slate-400 text-lg">
+          What drives me, how I work, and where I&apos;m going.
         </p>
       </section>
 
-      {/* Mission-Driven Work */}
-      <section className="card p-8 space-y-6">
-        <h2 className="text-3xl font-bold text-blue-400">Mission-Driven Work</h2>
-        <p className="text-lg text-slate-200 leading-relaxed">
-          I'm passionate about building technology that creates{" "}
-          <span className="text-white font-semibold">equitable access to healthcare</span>. 
-          My long-term goal is to contribute to platforms that genuinely help people — 
-          organ donation networks, insurance accessibility tools, crowdfunding for medical needs, 
-          and systems that connect underserved communities with quality care at reasonable costs.
+      {/* Mission */}
+      <section className="space-y-4">
+        <h2 className="text-xl font-bold text-blue-400">Mission</h2>
+        <p className="text-slate-200 leading-relaxed">
+          I&apos;m passionate about building technology that creates{" "}
+          <span className="text-white font-semibold">equitable access to healthcare</span>: organ donation networks, insurance accessibility tools, and systems that connect underserved communities with quality care at reasonable costs.
         </p>
-        <p className="text-lg text-slate-200 leading-relaxed">
+        <p className="text-slate-200">
           I want to work where{" "}
           <span className="text-blue-400 font-semibold">engineering excellence meets social impact</span>.
         </p>
       </section>
 
       {/* Core Principles */}
-      <section className="space-y-6">
-        <h2 className="text-3xl font-bold text-blue-400">Core Principles</h2>
-        
-        <div className="grid sm:grid-cols-2 gap-6">
-          <div className="card p-6 space-y-3">
-            <h3 className="text-xl font-semibold text-white">Start with the user</h3>
-            <p className="text-slate-200">
-              Define the job-to-be-done and success metrics before code.
-            </p>
-          </div>
-
-          <div className="card p-6 space-y-3">
-            <h3 className="text-xl font-semibold text-white">Default to simple</h3>
-            <p className="text-slate-200">
-              If a diagram needs three boxes, don't draw five.
-            </p>
-          </div>
-
-          <div className="card p-6 space-y-3">
-            <h3 className="text-xl font-semibold text-white">Ship in slices</h3>
-            <p className="text-slate-200">
-              Thin verticals over wide layers; learn fast.
-            </p>
-          </div>
-
-          <div className="card p-6 space-y-3">
-            <h3 className="text-xl font-semibold text-white">Measure impact</h3>
-            <p className="text-slate-200">
-              Perf, accuracy, cycle time — or it didn't happen.
-            </p>
-          </div>
-
-          <div className="card p-6 space-y-3">
-            <h3 className="text-xl font-semibold text-white">Kind candor</h3>
-            <p className="text-slate-200">
-              Direct, respectful communication; write it down.
-            </p>
-          </div>
-
-          <div className="card p-6 space-y-3">
-            <h3 className="text-xl font-semibold text-white">Own the outcome</h3>
-            <p className="text-slate-200">
-              Done = shipped, observed, and useful.
-            </p>
-          </div>
+      <section className="space-y-5">
+        <h2 className="text-xl font-bold text-blue-400">Core Principles</h2>
+        <div className="grid sm:grid-cols-2 gap-4">
+          {[
+            ["Start with the user", "Define the job-to-be-done and success metrics before code."],
+            ["Default to simple", "If a diagram needs three boxes, don't draw five."],
+            ["Ship in slices", "Thin verticals over wide layers; learn fast."],
+            ["Measure impact", "Perf, accuracy, cycle time. If it's not measured, it didn't happen."],
+            ["Kind candor", "Direct, respectful communication; write it down."],
+            ["Own the outcome", "Done = shipped, observed, and useful."],
+          ].map(([title, desc]) => (
+            <div key={title} className="card p-4 space-y-1">
+              <p className="font-semibold text-white text-sm">{title}</p>
+              <p className="text-slate-400 text-sm">{desc}</p>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* Research Interests */}
-      <section className="card p-8 space-y-6 border-blue-400/30">
-        <h2 className="text-3xl font-bold text-blue-400">Research Interests</h2>
-        <p className="text-lg text-slate-200 leading-relaxed">
-          I'm pursuing research at the intersection of AI and healthcare, focusing on how to design 
-          systems that are human-centered. My interests span:
-        </p>
-        
-        <div className="space-y-4">
-          <div className="border-l-2 border-blue-400/50 pl-4">
-            <h3 className="text-lg font-semibold text-white mb-2">🎨 Design & User Experience</h3>
-            <p className="text-slate-200">
-              How do we create AI tools that clinicians trust and patients understand? 
-              Exploring explainability, transparency, and usability in clinical workflows.
-            </p>
-          </div>
+      {/* Divider */}
+      <div className="border-t border-white/10" />
 
-          <div className="border-l-2 border-blue-400/50 pl-4">
-            <h3 className="text-lg font-semibold text-white mb-2">⚖️ Ethics, Fairness & Equity</h3>
-            <p className="text-slate-200">
-              Investigating algorithmic bias, health equity for marginalized populations, 
-              and responsible AI development that doesn't perpetuate existing healthcare disparities.
-            </p>
-          </div>
-
-          <div className="border-l-2 border-blue-400/50 pl-4">
-            <h3 className="text-lg font-semibold text-white mb-2">🏥 Clinical Integration & Adoption</h3>
-            <p className="text-slate-200">
-              Bridging the gap between research and practice. How do we build AI systems 
-              that fit into real clinical workflows and are actually adopted by healthcare providers?
-            </p>
-          </div>
-
-          <div className="border-l-2 border-blue-400/50 pl-4">
-            <h3 className="text-lg font-semibold text-white mb-2">🩺 Patient Safety & Outcomes</h3>
-            <p className="text-slate-200">
-              Measuring what matters. Studying how AI interventions impact patient safety, 
-              health outcomes, and quality of care in real-world settings.
-            </p>
-          </div>
+      {/* How I Think & Work */}
+      <section className="space-y-5">
+        <div>
+          <h2 className="text-xl font-bold text-blue-400">How I Think & Work</h2>
+          <p className="text-slate-400 text-sm mt-1">
+            I build like an architect and ship like an engineer.
+          </p>
         </div>
-
-        <p className="text-lg text-slate-200 leading-relaxed pt-4">
-          Through my <Link href="/learning/human-centered-ai-healthcare" className="text-blue-400 hover:underline">daily learning logs</Link> and{" "}
-          <Link href="/blogs" className="text-blue-400 hover:underline">blog posts</Link>, 
-          I'm systematically exploring these questions and developing a research foundation 
-          for PhD work in human-centered AI.
-        </p>
-      </section>
-
-      {/* Call to Action */}
-      <section className="card p-8 text-center space-y-6 bg-gradient-to-br from-blue-500/10 to-transparent border-blue-400/20">
-        <h2 className="text-2xl font-bold">Let's build something meaningful</h2>
-        <p className="text-slate-200 max-w-2xl mx-auto">
-          If you're working on healthcare technology, AI for social good, or mission-driven products, 
-          I'd love to hear from you.
-        </p>
-        <div className="flex gap-4 justify-center">
-          <Link href="/#contact" className="btn">
-            Get in Touch
-          </Link>
-          <Link href="/experience" className="inline-flex items-center rounded-2xl px-4 py-2 border border-white/15 hover:border-white/30 transition">
-            View Experience
-          </Link>
+        <div className="grid sm:grid-cols-2 gap-4">
+          {[
+            ["Architecture first", "I design data flows, API contracts, and failure modes before writing a single line. Systems thinking is the default, not a phase."],
+            ["Trade-offs over defaults", "I don't reach for the 'standard' answer. Every decision gets named: what it costs, what it gains, and why this context makes it right."],
+            ["Continuously upskilling", "Actively studying system design, distributed systems, and production architecture patterns and applying them directly to what I ship."],
+            ["AI as a force multiplier", "I use AI with intent: structured prompts, context boundaries, token optimization to compress learning cycles and increase output quality."],
+          ].map(([title, desc]) => (
+            <div key={title} className="card p-4 space-y-1">
+              <p className="font-semibold text-white text-sm">{title}</p>
+              <p className="text-slate-400 text-sm">{desc}</p>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* Back to Home */}
-      <div className="text-center pt-8">
-        <Link href="/" className="btn">
-          Back to Home
+      {/* How I use AI */}
+      <section className="card p-6 border-blue-400/20 space-y-4">
+        <h2 className="text-xl font-bold text-blue-400">AI-Augmented Engineering</h2>
+        <p className="text-slate-200 text-sm leading-relaxed">
+          I treat AI as a senior pair programmer, one that accelerates decision-making, surfaces options faster, and sharpens output quality. That distinction shapes how I work.
+        </p>
+        <div className="space-y-3">
+          {[
+            ["Structured prompting", "I design prompts with explicit role, context, constraints, and output format, the same way I'd write a good API contract."],
+            ["Token optimization", "I scope context windows intentionally: include what the model needs, exclude what adds noise. Tighter context produces more accurate output and scales better."],
+            ["Judgment-led review", "Every AI output is validated against first principles. AI accelerates exploration; engineering judgment determines what ships."],
+            ["Learning acceleration", "I use AI to compress the feedback loop on unfamiliar concepts including design patterns, new frameworks, and architecture decisions, then validate through implementation."],
+          ].map(([title, desc]) => (
+            <div key={title} className="flex gap-3 items-start">
+              <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-400 flex-shrink-0" />
+              <div>
+                <span className="font-semibold text-white text-sm">{title}: </span>
+                <span className="text-slate-400 text-sm">{desc}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="flex flex-wrap gap-3">
+        <Link href="/#contact" className="btn">Get in Touch</Link>
+        <Link href="/experience" className="inline-flex items-center rounded-2xl px-4 py-2 border border-white/15 hover:border-white/30 transition text-sm">
+          View Experience
         </Link>
-      </div>
+        <a
+          href="https://drive.google.com/uc?export=download&id=173XjBp4puh6NLXjMs3UwS3VgA_Al8Y-z"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-2xl px-4 py-2 bg-blue-500/10 border border-blue-400/30 hover:bg-blue-500/20 transition text-blue-200 text-sm"
+        >
+          Download Resume
+        </a>
+      </section>
+
     </div>
   );
 }

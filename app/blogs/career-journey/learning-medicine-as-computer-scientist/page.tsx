@@ -7,7 +7,7 @@ export default function LearningMedicinePost() {
       <section className="mx-auto max-w-3xl px-4 pt-8">
         <Link 
           href="/blogs/career-journey"
-          className="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm mb-8"
+          className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm mb-8"
         >
           <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -21,7 +21,7 @@ export default function LearningMedicinePost() {
         {/* Header */}
         <div className="mb-8">
           <div className="flex items-center gap-3 text-sm text-slate-400 mb-4">
-            <span className="px-2 py-1 bg-cyan-500/10 text-cyan-400 rounded text-xs font-medium">
+            <span className="px-2 py-1 bg-blue-500/10 text-blue-400 rounded text-xs font-medium">
               Career & Learning Journey
             </span>
             <span>•</span>
@@ -67,7 +67,7 @@ export default function LearningMedicinePost() {
 
           <h2 className="text-2xl font-bold text-white mt-8 mb-4">Key Realizations</h2>
 
-          <h3 className="text-xl font-semibold text-cyan-400 mt-6 mb-3">1. Medicine Is Surprisingly Systematic</h3>
+          <h3 className="text-xl font-semibold text-blue-400 mt-6 mb-3">1. Medicine Is Surprisingly Systematic</h3>
 
           <p>
             I expected medicine to be entirely intuition-based. But there's a lot of structure: 
@@ -80,7 +80,7 @@ export default function LearningMedicinePost() {
             them takes practice.
           </p>
 
-          <h3 className="text-xl font-semibold text-cyan-400 mt-6 mb-3">2. Context Is Everything</h3>
+          <h3 className="text-xl font-semibold text-blue-400 mt-6 mb-3">2. Context Is Everything</h3>
 
           <p>
             In software, you can often isolate a problem: "Fix the login bug." In medicine, everything 
@@ -93,7 +93,7 @@ export default function LearningMedicinePost() {
             you have to understand the whole patient.
           </p>
 
-          <h3 className="text-xl font-semibold text-cyan-400 mt-6 mb-3">3. The Gap Between Research and Practice</h3>
+          <h3 className="text-xl font-semibold text-blue-400 mt-6 mb-3">3. The Gap Between Research and Practice</h3>
 
           <p>
             I read a brilliant paper on using machine learning for sepsis prediction. Then I read 
@@ -113,15 +113,15 @@ export default function LearningMedicinePost() {
 
           <h2 className="text-2xl font-bold text-white mt-8 mb-4">Unexpected Challenges</h2>
 
-          <h3 className="text-xl font-semibold text-cyan-400 mt-6 mb-3">Acronym Overload</h3>
+          <h3 className="text-xl font-semibold text-blue-400 mt-6 mb-3">Acronym Overload</h3>
 
           <p>
             Medicine loves acronyms. CHF, COPD, MI, CVA, DM, HTN... I've started keeping a running 
-            glossary. (Pro tip: <a href="https://www.medicinenet.com" className="text-cyan-400 hover:underline" target="_blank">MedicineNet</a> is 
+            glossary. (Pro tip: <a href="https://www.medicinenet.com" className="text-blue-400 hover:underline" target="_blank">MedicineNet</a> is 
             your friend.)
           </p>
 
-          <h3 className="text-xl font-semibold text-cyan-400 mt-6 mb-3">Impostor Syndrome</h3>
+          <h3 className="text-xl font-semibold text-blue-400 mt-6 mb-3">Impostor Syndrome</h3>
 
           <p>
             Reading medical papers without a biology background is humbling. I constantly have to 
@@ -138,21 +138,21 @@ export default function LearningMedicinePost() {
 
           <ul className="space-y-3 list-none pl-0">
             <li className="flex gap-3">
-              <span className="text-cyan-400 font-bold">→</span>
+              <span className="text-blue-400 font-bold">→</span>
               <div>
                 <strong>Learning in public:</strong> Writing daily learning logs forces me to 
                 consolidate what I've learned
               </div>
             </li>
             <li className="flex gap-3">
-              <span className="text-cyan-400 font-bold">→</span>
+              <span className="text-blue-400 font-bold">→</span>
               <div>
                 <strong>Connecting to my tech background:</strong> Asking "How would I build a system 
                 for this?" makes concepts stick
               </div>
             </li>
             <li className="flex gap-3">
-              <span className="text-cyan-400 font-bold">→</span>
+              <span className="text-blue-400 font-bold">→</span>
               <div>
                 <strong>Setting small goals:</strong> One chapter per day. One concept per day. 
                 Consistency over intensity.
@@ -222,7 +222,7 @@ export default function LearningMedicinePost() {
           <div className="mt-6 flex justify-between items-center">
             <Link 
               href="/blogs/career-journey"
-              className="text-cyan-400 hover:text-cyan-300 text-sm"
+              className="text-blue-400 hover:text-blue-300 text-sm"
             >
               ← All Career Journey Posts
             </Link>

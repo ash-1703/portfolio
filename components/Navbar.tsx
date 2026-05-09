@@ -22,7 +22,7 @@ export default function Navbar() {
         <Link href="/about" className="hover:text-white">About</Link>
         <Link href="/#contact" className="hover:text-white">Contact</Link>
         <a
-          href="https://drive.google.com/file/d/18QlrN43WGqvaJ0EGw0ZW3s1CkbBERhBk/view?usp=sharing"
+          href="https://drive.google.com/file/d/173XjBp4puh6NLXjMs3UwS3VgA_Al8Y-z/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           className="btn text-sm"

@@ -51,7 +51,7 @@ export default async function BlogPostPage({
       <section className="mx-auto max-w-3xl px-4 pt-8">
         <Link 
           href={`/blogs/${params.category}`}
-          className="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm mb-8"
+          className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm mb-8"
         >
           <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -64,7 +64,7 @@ export default async function BlogPostPage({
       <article className="mx-auto max-w-3xl px-4 pb-20">
         {/* Meta Info */}
         <div className="flex items-center gap-3 text-sm text-slate-400 mb-6">
-          <span className="px-3 py-1 bg-cyan-500/10 text-cyan-400 rounded-full">
+          <span className="px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full">
             {categoryNames[params.category]}
           </span>
           <time>{post.date}</time>
@@ -89,14 +89,14 @@ export default async function BlogPostPage({
               const text = block.children?.map((child: any) => child.text).join('') || '';
               
               if (block.style === 'h2') {
-                return <h2 key={idx} className="text-3xl font-bold mt-12 mb-4 text-cyan-400">{text}</h2>;
+                return <h2 key={idx} className="text-3xl font-bold mt-12 mb-4 text-blue-400">{text}</h2>;
               }
               if (block.style === 'h3') {
                 return <h3 key={idx} className="text-2xl font-bold mt-8 mb-3">{text}</h3>;
               }
               if (block.style === 'blockquote') {
                 return (
-                  <blockquote key={idx} className="border-l-4 border-cyan-500 pl-6 py-4 my-8 bg-cyan-500/5 italic">
+                  <blockquote key={idx} className="border-l-4 border-blue-400 pl-6 py-4 my-8 bg-blue-500/5 italic">
                     {text}
                   </blockquote>
                 );

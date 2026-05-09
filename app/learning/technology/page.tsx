@@ -31,14 +31,13 @@ export default async function TechnologyLearningPage() {
       {/* Header */}
       <section className="mx-auto max-w-4xl px-4 pt-24 pb-12">
         <div className="flex items-center gap-3 mb-6">
-          <span className="text-5xl">💻</span>
+          <span className="text-5xl">🧩</span>
           <h1 className="text-4xl md:text-5xl font-bold">
-            Technology & <span className="gradient-text">AI</span>
+            DSA & <span className="gradient-text">LeetCode</span>
           </h1>
         </div>
-        <p className="text-lg text-slate-200 max-w-3xl">
-          Daily learning log exploring machine learning, AI systems, healthcare technology, 
-          and responsible AI development.
+        <p className="text-lg text-slate-400 max-w-2xl">
+          Learning log on algorithm patterns, data structures, problem-solving strategies, and interview prep.
         </p>
       </section>
 
@@ -49,7 +48,7 @@ export default async function TechnologyLearningPage() {
             <Link
               key={idx}
               href={`/learning/technology/${entry.slug}`}
-              className="block border border-white/10 rounded-lg p-6 hover:border-cyan-500/50 transition-all hover:shadow-lg hover:shadow-cyan-500/10 group"
+              className="block border border-white/10 rounded-lg p-6 hover:border-blue-400/40 transition-all hover:shadow-lg hover:shadow-blue-500/10 group"
             >
               {/* Date */}
               <div className="flex items-center gap-2 text-sm text-slate-400 mb-3">
@@ -69,7 +68,7 @@ export default async function TechnologyLearningPage() {
 
               {/* Read More */}
               <div className="flex items-center justify-end">
-                <span className="flex items-center text-cyan-400 text-sm font-medium">
+                <span className="flex items-center text-blue-400 text-sm font-medium">
                   Read more
                   <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

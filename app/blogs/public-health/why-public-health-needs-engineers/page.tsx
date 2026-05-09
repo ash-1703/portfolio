@@ -7,7 +7,7 @@ export default function WhyPublicHealthNeedsEngineersPost() {
       <section className="mx-auto max-w-3xl px-4 pt-8">
         <Link 
           href="/blogs/public-health"
-          className="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm mb-8"
+          className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm mb-8"
         >
           <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -21,7 +21,7 @@ export default function WhyPublicHealthNeedsEngineersPost() {
         {/* Header */}
         <div className="mb-8">
           <div className="flex items-center gap-3 text-sm text-slate-400 mb-4">
-            <span className="px-2 py-1 bg-cyan-500/10 text-cyan-400 rounded text-xs font-medium">
+            <span className="px-2 py-1 bg-blue-500/10 text-blue-400 rounded text-xs font-medium">
               Public Health
             </span>
             <span>•</span>
@@ -66,7 +66,7 @@ export default function WhyPublicHealthNeedsEngineersPost() {
 
           <h2 className="text-2xl font-bold text-white mt-8 mb-4">Three Areas Where Engineering Mindsets Are Critical</h2>
 
-          <h3 className="text-xl font-semibold text-cyan-400 mt-6 mb-3">1. Data Infrastructure for Public Health</h3>
+          <h3 className="text-xl font-semibold text-blue-400 mt-6 mb-3">1. Data Infrastructure for Public Health</h3>
           
           <p>
             Public health depends on surveillance—tracking disease outbreaks, monitoring chronic 
@@ -81,13 +81,13 @@ export default function WhyPublicHealthNeedsEngineersPost() {
             engineers, data engineers, and systems architects.
           </p>
 
-          <blockquote className="border-l-4 border-cyan-500 pl-6 py-2 bg-cyan-500/5 italic">
+          <blockquote className="border-l-4 border-blue-400 pl-6 py-2 bg-blue-500/5 italic">
             "The COVID-19 pandemic exposed how ill-equipped we were to track cases, allocate 
             resources, and model spread. Better epidemiological models exist—but they need clean, 
             timely data to be useful."
           </blockquote>
 
-          <h3 className="text-xl font-semibold text-cyan-400 mt-6 mb-3">2. Logistics & Supply Chain Management</h3>
+          <h3 className="text-xl font-semibold text-blue-400 mt-6 mb-3">2. Logistics & Supply Chain Management</h3>
 
           <p>
             Vaccines expire. Blood banks run low. Medications stock out in rural clinics while urban 
@@ -100,7 +100,7 @@ export default function WhyPublicHealthNeedsEngineersPost() {
             are all solvable with engineering tools.
           </p>
 
-          <h3 className="text-xl font-semibold text-cyan-400 mt-6 mb-3">3. Scalable Interventions</h3>
+          <h3 className="text-xl font-semibold text-blue-400 mt-6 mb-3">3. Scalable Interventions</h3>
 
           <p>
             A doctor can treat 30 patients per day. A well-designed telemedicine platform can triage 
@@ -118,28 +118,28 @@ export default function WhyPublicHealthNeedsEngineersPost() {
 
           <ul className="space-y-3 list-none pl-0">
             <li className="flex gap-3">
-              <span className="text-cyan-400 font-bold">→</span>
+              <span className="text-blue-400 font-bold">→</span>
               <div>
                 <strong>Systems-level thinking:</strong> Seeing healthcare as interconnected components, 
                 not isolated encounters
               </div>
             </li>
             <li className="flex gap-3">
-              <span className="text-cyan-400 font-bold">→</span>
+              <span className="text-blue-400 font-bold">→</span>
               <div>
                 <strong>Obsession with efficiency:</strong> Reducing latency, eliminating bottlenecks, 
                 automating repetitive tasks
               </div>
             </li>
             <li className="flex gap-3">
-              <span className="text-cyan-400 font-bold">→</span>
+              <span className="text-blue-400 font-bold">→</span>
               <div>
                 <strong>Comfort with uncertainty:</strong> Engineers build systems that handle edge cases 
                 and fail gracefully
               </div>
             </li>
             <li className="flex gap-3">
-              <span className="text-cyan-400 font-bold">→</span>
+              <span className="text-blue-400 font-bold">→</span>
               <div>
                 <strong>Iteration mindset:</strong> Rapid prototyping, A/B testing, continuous improvement
               </div>
@@ -196,7 +196,7 @@ export default function WhyPublicHealthNeedsEngineersPost() {
           <div className="mt-6 flex justify-between items-center">
             <Link 
               href="/blogs/public-health"
-              className="text-cyan-400 hover:text-cyan-300 text-sm"
+              className="text-blue-400 hover:text-blue-300 text-sm"
             >
               ← All Public Health Posts
             </Link>

@@ -1,30 +1,60 @@
 {
   "pages": {
+    "/learning/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/learning/page.js"
+    ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/experience/page": [
+    "/learning/human-centered-ai-healthcare/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/experience/page.js"
+      "static/chunks/app/learning/human-centered-ai-healthcare/page.js"
     ],
-    "/page": [
+    "/learning/technology/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
+      "static/chunks/app/learning/technology/page.js"
     ],
-    "/about/page": [
+    "/blogs/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/about/page.js"
+      "static/chunks/app/blogs/page.js"
     ],
-    "/_not-found/page": [
+    "/blogs/ethics-and-equity/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/_not-found/page.js"
+      "static/chunks/app/blogs/ethics-and-equity/page.js"
+    ],
+    "/blogs/design-and-ux/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/blogs/design-and-ux/page.js"
+    ],
+    "/blogs/clinical-integration/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/blogs/clinical-integration/page.js"
+    ],
+    "/blogs/patient-outcomes/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/blogs/patient-outcomes/page.js"
+    ],
+    "/learning/ai-llm/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/learning/ai-llm/page.js"
+    ],
+    "/learning/engineering-craft/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/learning/engineering-craft/page.js"
     ]
   }
 }
