@@ -17,17 +17,29 @@ export default function ExperiencePage() {
         <h2 className="text-2xl font-bold text-blue-400">Professional Experience</h2>
         
         <ExperienceCard
+          title="Software Development Engineer"
+          company="Imperial Platforms Inc"
+          location="Dallas, TX"
+          period="Jan 2026 – Present"
+          achievements={[
+            "Architected 10+ production-ready features for EdTech and FinTech platforms using React Native and Next.js, directly improving cross-platform user engagement.",
+            "Reduced feature lead time by 30% by designing a reusable component architecture across 25+ UI modules, standardizing the frontend development lifecycle.",
+            "Mitigated technical debt across 20+ legacy modules by spearheading a strategic migration from PHP to a scalable React/Node.js micro-architecture.",
+            "Enhanced system throughput for 5,000+ concurrent records by optimizing MongoDB schemas with advanced indexing and query aggregation strategies.",
+            "Spearheaded the overhaul of 10+ core APIs, implementing OAuth2 and Zod validation, which reduced production p99 error rates by 40%."
+          ]}
+        />
+
+        <ExperienceCard
           title="Software Developer"
           company="Telgoo5 Inc"
           location="New York City, NY"
           period="Mar 2025 – Aug 2025"
           achievements={[
-            "Designed, tested, and shipped 15+ React + TypeScript components used in production dashboards, reducing user task completion time by ~40%.",
-            "Built and maintained modular UI and API integrations, improving scalability and reducing repeated custom requests by ~30%.",
-            "Collaborated with backend services and SQL databases to optimize data retrieval, improving page load times by 180–300ms.",
-            "Troubleshot UI, API, and permission issues across browsers and environments, reducing support tickets by ~20%.",
-            "Partnered with QA to validate fixes, document workflows, and ensure continued functionality during releases.",
-            "Contributed to 10+ production deployments using Git-based CI/CD pipelines with minimal rollbacks."
+            "Engineered a role-based access control (RBAC) platform using PHP and MySQL, enabling 20+ daily operational workflows across 5 distinct user personas.",
+            "Automated the end-to-end SIM/device lifecycle, reducing manual intervention by 25% and streamlining supply chain operations for telecom clients.",
+            "Reduced backend latency by 300ms by refactoring inefficient SQL queries and optimizing data retrieval workflows, enhancing real-time system responsiveness.",
+            "Achieved 99.9% data consistency by designing end-to-end validation suites to resolve complex API and database synchronization mismatches."
           ]}
         />
 
@@ -37,37 +49,31 @@ export default function ExperiencePage() {
           location="Arlington, TX"
           period="Nov 2024 – Mar 2025"
           achievements={[
-            "Developed Python-based services to parse, validate, and normalize structured data consumed by frontend applications.",
-            "Built and consumed REST APIs to automate document generation and data workflows.",
-            "Improved backend data accuracy and reliability, reducing manual intervention by ~35%.",
-            "Collaborated with frontend and QA teams to debug parsing and API edge cases in production workflows."
+            "Built a high-throughput AI pipeline using Python and Gemini LLM to automate the generation of 300+ professional resumes with 95%+ parsing accuracy.",
+            "Decreased document generation time to <5 seconds by engineering a custom LaTeX rendering engine integrated with Jinja2 and asynchronous subprocess execution.",
+            "Optimized LLM output consistency across 8+ resume sections by designing a schema-driven prompt engineering framework to eliminate formatting hallucinations."
           ]}
         />
 
         <ExperienceCard
-          title="Software Engineer"
-          company="University of Texas – Arlington"
+          title="Research Assistant"
+          company="University of Texas at Arlington"
           location="Arlington, TX"
-          period="July 2024 – Mar 2025"
+          period="Jul 2024 – Mar 2025"
           achievements={[
-            "Built and maintained 3 internal React dashboards connected to Python APIs to support research and evaluation workflows.",
-            "Developed backend services to process and store results from 500+ evaluation runs in SQL-backed data stores.",
-            "Investigated and resolved 30+ UI bugs, API timeouts, and data consistency issues during weekly development cycles.",
-            "Created setup guides and system documentation used to onboard 4 new research assistants and support ongoing maintenance."
+            "Developed a RAG-based LLM system for clinical decision support, increasing response accuracy by 35% on structured medical datasets.",
+            "Minimized model hallucinations by architecting a hybrid retrieval system combining vector embeddings with SQL-backed verified medical records.",
+            "Quantified LLM performance by designing scoring rubrics and test datasets to evaluate 500+ model responses for medical ethics and factual precision."
           ]}
         />
 
         <ExperienceCard
-          title="Software Developer (Full Stack)"
+          title="Software Developer"
           company="Dr Tupe Skin and Hair Clinic"
           location="Mumbai, IN"
           period="Jan 2021 – Jun 2022"
           achievements={[
-            "Built and maintained internal web tools supporting patient records, appointments, and billing for a clinic handling 20–30 visits per day.",
-            "Developed frontend interfaces using JavaScript, HTML, and CSS used daily by 6 clinic staff members.",
-            "Implemented backend logic and SQL-based storage for 1,500+ patient visits, treatments, and payment records.",
-            "Worked directly with clinic staff to gather requirements and resolve 40+ workflow and data issues over time.",
-            "Performed regular maintenance, bug fixes, and data updates to ensure uninterrupted system availability."
+            "Digitized 1,500+ patient records by building a full-stack management system (AngularJS/SQL), increasing administrative efficiency by 50%."
           ]}
         />
 
