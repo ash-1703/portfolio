@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import ProjectCard from "@/components/ProjectCard";
+import CalendlyWidget from "@/components/CalendlyWidget";
 import Link from "next/link";
 
 export default function Page() {
@@ -92,6 +93,8 @@ export default function Page() {
           />
         </div>
       </section>
+
+      <CalendlyWidget />
 
       <section id="contact" className="py-20">
         <div className="card p-8 text-center">
