@@ -1,27 +1,67 @@
 "use client";
 
 import Script from "next/script";
+import { useEffect } from "react";
+
+declare global {
+  interface Window {
+    Calendly?: {
+      initBadgeWidget: (options: {
+        url: string;
+        text: string;
+        color: string;
+        textColor: string;
+        branding: boolean;
+      }) => void;
+    };
+  }
+}
 
 export default function CalendlyWidget() {
+  useEffect(() => {
+    // In case the script already loaded before this component mounted
+    if (window.Calendly) {
+      window.Calendly.initBadgeWidget({
+        url: "https://calendly.com/aishwaryasambhajitupe/15",
+        text: "Schedule time with me",
+        color: "#3b82f6",
+        textColor: "#ffffff",
+        branding: true,
+      });
+    }
+  }, []);
+
   return (
-    <section id="book-a-call" className="py-16">
-      <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold">Book a Call</h2>
-        <p className="text-slate-200 mt-3 max-w-xl mx-auto">
-          Want to chat about a project, role, or collaboration? Pick a time that works for you.
-        </p>
-      </div>
-
-      <div
-        className="calendly-inline-widget mx-auto rounded-2xl overflow-hidden"
-        data-url="https://calendly.com/aishwaryasambhajitupe/15?text_color=ffffff"
-        style={{ minWidth: "320px", height: "700px" }}
+    <>
+      {/* Calendly badge CSS */}
+      {/* eslint-disable-next-line @next/next/no-page-custom-font */}
+      <link
+        href="https://assets.calendly.com/assets/external/widget.css"
+        rel="stylesheet"
       />
+      {/* Move the badge to bottom-left so it doesn't overlap the AI chat widget */}
+      <style>{`
+        .calendly-badge-widget {
+          right: auto !important;
+          left: 20px !important;
+        }
+      `}</style>
 
+      {/* Calendly badge JS — initialise once loaded */}
       <Script
         src="https://assets.calendly.com/assets/external/widget.js"
         strategy="lazyOnload"
+        onLoad={() => {
+          window.Calendly?.initBadgeWidget({
+            url: "https://calendly.com/aishwaryasambhajitupe/15",
+            text: "Schedule time with me",
+            color: "#3b82f6",
+            textColor: "#ffffff",
+            branding: true,
+          });
+        }}
       />
-    </section>
+    </>
   );
 }
+
