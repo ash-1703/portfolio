@@ -19,16 +19,9 @@ declare global {
 
 export default function CalendlyWidget() {
   useEffect(() => {
-    // In case the script already loaded before this component mounted
-    if (window.Calendly) {
-      window.Calendly.initBadgeWidget({
-        url: "https://calendly.com/aishwaryasambhajitupe/15",
-        text: "Schedule time with me",
-        color: "#3b82f6",
-        textColor: "#ffffff",
-        branding: true,
-      });
-    }
+    // Intentionally don't auto-initialize a global badge.
+    // We only load Calendly's assets so other components can call
+    // Calendly.initPopupWidget(...) when the user explicitly requests scheduling.
   }, []);
 
   return (
@@ -39,27 +32,17 @@ export default function CalendlyWidget() {
         href="https://assets.calendly.com/assets/external/widget.css"
         rel="stylesheet"
       />
-      {/* Move the badge to bottom-left so it doesn't overlap the AI chat widget */}
+      {/* We intentionally don't inject badge CSS. Calendly will be used via popup calls from ChatWidget. */}
+      {/* Hide any auto-inserted Calendly badge so it doesn't cover site UI; we rely on popups instead. */}
       <style>{`
-        .calendly-badge-widget {
-          right: auto !important;
-          left: 20px !important;
-        }
+        .calendly-badge-widget, .calendly-badge, .calendly-appointment-widget { display: none !important; }
       `}</style>
 
       {/* Calendly badge JS — initialise once loaded */}
       <Script
         src="https://assets.calendly.com/assets/external/widget.js"
         strategy="lazyOnload"
-        onLoad={() => {
-          window.Calendly?.initBadgeWidget({
-            url: "https://calendly.com/aishwaryasambhajitupe/15",
-            text: "Schedule time with me",
-            color: "#3b82f6",
-            textColor: "#ffffff",
-            branding: true,
-          });
-        }}
+        // Intentionally do not call initBadgeWidget — we'll open Calendly via popup when the user requests scheduling.
       />
     </>
   );

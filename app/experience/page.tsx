@@ -20,7 +20,7 @@ export default function ExperiencePage() {
           title="Software Development Engineer"
           company="Imperial Platforms Inc"
           location="Dallas, TX"
-          period="Jan 2026 – Present"
+          period="Sep 2025 – Present"
           achievements={[
             "Architected 10+ production-ready features for EdTech and FinTech platforms using React Native and Next.js, directly improving cross-platform user engagement.",
             "Reduced feature lead time by 30% by designing a reusable component architecture across 25+ UI modules, standardizing the frontend development lifecycle.",

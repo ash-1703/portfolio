@@ -15,6 +15,7 @@ export default function ChatWidget() {
       : localApi);
 
   const [open, setOpen] = useState(false);
+  const [chooserOpen, setChooserOpen] = useState(false);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [messages, setMessages] = useState<Msg[]>([
@@ -109,21 +110,70 @@ export default function ChatWidget() {
 
   return (
     <>
-      {/* Floating toggle button */}
-      <button
-        onClick={() => setOpen((v) => !v)}
-        className="fixed bottom-5 right-5 z-50 btn shadow-xl"
-        aria-expanded={open}
-        aria-controls="insight-chat"
-      >
-        {open ? "Close Chat" : "Chat with my AI Twin"}
-      </button>
+      {/* Floating chooser button — presents Schedule vs Chat */}
+  <div className="fixed bottom-5 right-5 z-[9999] flex items-center gap-2">
+        {/* <button
+          onClick={() => setOpen(true)}
+          className="btn shadow-xl"
+          aria-expanded={open}
+          aria-controls="insight-chat"
+        >
+          Chat
+        </button> */}
+
+        <button
+          onClick={() => setChooserOpen((v) => !v)}
+          className="btn shadow-xl"
+          aria-expanded={chooserOpen}
+          aria-controls="insight-chooser"
+          aria-label="Open contact options"
+        >
+          Let's chat?
+        </button>
+
+        {chooserOpen && (
+          <div
+            id="insight-chooser"
+            className="mt-2 w-44 bg-[var(--card)]/95 border border-white/10 rounded-xl p-2 shadow-2xl flex flex-col gap-2"
+            style={{ zIndex: 10000 }}
+          >
+            <button
+              onClick={() => {
+                // Open Calendly popup
+                if (typeof window !== "undefined" && (window as any).Calendly) {
+                  (window as any).Calendly.initPopupWidget({
+                    url: "https://calendly.com/aishwaryasambhajitupe/15",
+                  });
+                } else {
+                  // Fallback: open Calendly in a new tab
+                  window.open("https://calendly.com/aishwaryasambhajitupe/15", "_blank");
+                }
+                setChooserOpen(false);
+              }}
+              className="text-left px-3 py-2 rounded-lg hover:bg-white/5"
+            >
+              Schedule a time
+            </button>
+
+            <button
+              onClick={() => {
+                setOpen(true);
+                setChooserOpen(false);
+              }}
+              className="text-left px-3 py-2 rounded-lg hover:bg-white/5"
+            >
+              Chat with AI twin
+            </button>
+          </div>
+        )}
+      </div>
 
       {/* Panel */}
-      {open && (
+        {open && (
         <div
           id="insight-chat"
-          className="fixed bottom-20 right-5 z-50 w-[92vw] max-w-md h-[70vh] sm:h-[60vh] rounded-2xl border border-white/10 bg-[var(--card)]/90 backdrop-blur shadow-2xl flex flex-col"
+          className="fixed bottom-20 right-5 z-[9999] w-[92vw] max-w-md h-[70vh] sm:h-[60vh] rounded-2xl border border-white/10 bg-[var(--card)]/90 backdrop-blur shadow-2xl flex flex-col"
+          style={{ zIndex: 10000 }}
         >
           <div className="px-4 py-3 border-b border-white/10 flex items-center justify-between">
             <div className="font-semibold">Insight Agent</div>
