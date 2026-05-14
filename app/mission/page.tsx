@@ -102,9 +102,8 @@ export default function MissionPage() {
           View Experience
         </Link>
         <a
-          href="https://drive.google.com/uc?export=download&id=173XjBp4puh6NLXjMs3UwS3VgA_Al8Y-z"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/api/resume"
+          download
           className="inline-flex items-center gap-2 rounded-2xl px-4 py-2 bg-blue-500/10 border border-blue-400/30 hover:bg-blue-500/20 transition text-blue-200 text-sm"
         >
           Download Resume

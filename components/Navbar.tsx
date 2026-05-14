@@ -21,14 +21,24 @@ export default function Navbar() {
         <Link href="/certifications" className="hover:text-white">Certifications</Link>
         <Link href="/about" className="hover:text-white">About</Link>
         <Link href="/#contact" className="hover:text-white">Contact</Link>
-        <a
-          href="https://drive.google.com/file/d/173XjBp4puh6NLXjMs3UwS3VgA_Al8Y-z/view?usp=sharing"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn text-sm"
-        >
-          Resume
-        </a>
+        <div className="flex items-center gap-2">
+          <a
+            href="https://drive.google.com/file/d/1eRfDZugHqqrQNIMIZrhjPmVWiR7O0kdk/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn text-sm"
+          >
+            Resume
+          </a>
+          <a
+            href="/api/resume"
+            download
+            className="text-sm text-slate-300 hover:text-white"
+            title="Download resume"
+          >
+            ⤓
+          </a>
+        </div>
       </div>
 
       {/* Mobile hamburger */}
@@ -59,15 +69,25 @@ export default function Navbar() {
             <Link href="/certifications" onClick={() => setIsOpen(false)} className="hover:text-white py-2">Certifications</Link>
             <Link href="/about" onClick={() => setIsOpen(false)} className="hover:text-white py-2">About</Link>
             <Link href="/#contact" onClick={() => setIsOpen(false)} className="hover:text-white py-2">Contact</Link>
-            <a
-              href="https://drive.google.com/file/d/1fTFcixdS7mQ1SzLYqgmDOZFVa6FsbCnA/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white py-2 border-t border-white/10 pt-4 mt-2"
-              onClick={() => setIsOpen(false)}
-            >
-              Resume
-            </a>
+            <div className="border-t border-white/10 pt-4 mt-2">
+              <a
+                href="https://drive.google.com/file/d/1eRfDZugHqqrQNIMIZrhjPmVWiR7O0kdk/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white py-2 block"
+                onClick={() => setIsOpen(false)}
+              >
+                Resume
+              </a>
+              <a
+                href="/api/resume"
+                download
+                className="hover:text-white py-2 block"
+                onClick={() => setIsOpen(false)}
+              >
+                Download Resume
+              </a>
+            </div>
           </div>
         </div>
       )}

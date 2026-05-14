@@ -113,9 +113,8 @@ export default function Page() {
             </a>
             <a
               className="inline-flex items-center gap-2 rounded-2xl px-4 py-2 bg-blue-500/10 border border-blue-400/30 hover:bg-blue-500/20 transition text-blue-200"
-              target="_blank"
-              rel="noreferrer"
-              href="https://drive.google.com/uc?export=download&id=173XjBp4puh6NLXjMs3UwS3VgA_Al8Y-z"
+              href="/api/resume"
+              download
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" />

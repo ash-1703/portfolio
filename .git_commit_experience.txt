@@ -1,0 +1,8 @@
+Run the following in a fresh terminal to commit the Experience date update:
+
+cd /Users/ash/Desktop/Desktop/portfolio
+git add app/experience/page.tsx
+git commit -m "Update Imperial Platforms Inc dates to Sep 2025 – Present"
+git push origin main
+
+If you want me to run the commit for you, tell me and I will execute it.

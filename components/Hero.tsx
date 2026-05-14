@@ -41,9 +41,8 @@ export default function Hero() {
               View Projects
             </Link>
             <a
-              href="https://drive.google.com/uc?export=download&id=173XjBp4puh6NLXjMs3UwS3VgA_Al8Y-z"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/api/resume"
+              download
               className="inline-flex items-center gap-2 rounded-2xl px-4 py-2 bg-blue-500/10 border border-blue-400/30 hover:bg-blue-500/20 transition text-sm text-blue-200"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
