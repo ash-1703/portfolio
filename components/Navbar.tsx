@@ -23,7 +23,7 @@ export default function Navbar() {
         <Link href="/#contact" className="hover:text-white">Contact</Link>
         <div className="flex items-center gap-2">
           <a
-            href="https://drive.google.com/file/d/1eRfDZugHqqrQNIMIZrhjPmVWiR7O0kdk/view?usp=sharing"
+            href="https://drive.google.com/file/d/1JKFVEI4OrFMcqfxHlVwLdGiOXWG5joiQ/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="btn text-sm"
@@ -71,7 +71,7 @@ export default function Navbar() {
             <Link href="/#contact" onClick={() => setIsOpen(false)} className="hover:text-white py-2">Contact</Link>
             <div className="border-t border-white/10 pt-4 mt-2">
               <a
-                href="https://drive.google.com/file/d/1eRfDZugHqqrQNIMIZrhjPmVWiR7O0kdk/view?usp=sharing"
+                href="https://drive.google.com/file/d/1JKFVEI4OrFMcqfxHlVwLdGiOXWG5joiQ/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-white py-2 block"

@@ -1,7 +1,7 @@
 import { NextRequest } from 'next/server';
 
-const DRIVE_DOWNLOAD = 'https://drive.google.com/uc?export=download&id=1eRfDZugHqqrQNIMIZrhjPmVWiR7O0kdk';
-const DRIVE_VIEW = 'https://drive.google.com/file/d/1eRfDZugHqqrQNIMIZrhjPmVWiR7O0kdk/view?usp=sharing';
+const DRIVE_DOWNLOAD = 'https://drive.google.com/uc?export=download&id=1JKFVEI4OrFMcqfxHlVwLdGiOXWG5joiQ';
+const DRIVE_VIEW = 'https://drive.google.com/file/d/1JKFVEI4OrFMcqfxHlVwLdGiOXWG5joiQ/view?usp=sharing';
 
 export async function GET(req: NextRequest) {
   try {
