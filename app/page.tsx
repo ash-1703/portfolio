@@ -2,125 +2,101 @@ import Hero from "@/components/Hero";
 import ProjectCard from "@/components/ProjectCard";
 import Link from "next/link";
 
+const experience = [
+  { role: "Software Development Engineer", company: "Imperial Platforms Inc.", period: "Sep 2025 – May 2026", description: "Built EdTech product features using React Native, Next.js, Node.js, and MongoDB." },
+  { role: "Software Developer", company: "Telgoo5 Inc.", period: "Mar – Aug 2025", description: "Developed telecom order-management workflows, RBAC, search, and data dashboards using PHP and MySQL." },
+  { role: "Software Engineer Intern", company: "Interview Buddies", period: "Nov 2024 – Mar 2025", description: "Built a Python-based AI resume generation pipeline using Gemini, Jinja2, and LaTeX." },
+  { role: "AI Researcher", company: "University of Texas at Arlington", period: "2024 – 2025", description: "Researched clinical-language-model evaluation, summarization, and responsible AI." },
+];
+
 export default function Page() {
   return (
     <div>
       <Hero />
-      
-      {/* Quick Links Section */}
-      <section className="py-12">
-        <h2 className="sr-only">Quick Navigation</h2>
-        <div className="grid sm:grid-cols-3 gap-6">
-          <Link href="/experience" className="card p-6 hover:shadow-2xl transition-all group">
-            <h3 className="text-lg font-semibold group-hover:text-blue-400 transition mb-2">📋 Experience</h3>
-            <p className="text-slate-200 text-sm">6+ roles across full-stack development and AI/LLM engineering</p>
-          </Link>
 
-          <Link href="/mission" className="card p-6 hover:shadow-2xl transition-all group">
-            <h3 className="text-lg font-semibold group-hover:text-blue-400 transition mb-2">🎯 Mission & Values</h3>
-            <p className="text-slate-200 text-sm">Building healthcare tech for equitable access</p>
-          </Link>
-
-          <Link href="/about" className="card p-6 hover:shadow-2xl transition-all group">
-            <h3 className="text-lg font-semibold group-hover:text-blue-400 transition mb-2">👤 About Me</h3>
-            <p className="text-slate-200 text-sm">My background, skills, and interests</p>
-          </Link>
-        </div>
-      </section>
-
-      {/* What I Build */}
-      <section className="py-12 space-y-6">
-        <div className="flex items-center justify-between gap-4 flex-wrap">
-          <h2 className="text-2xl font-bold">What I Build</h2>
-          <div className="flex gap-3">
-            <Link href="/mission" className="btn text-sm">My approach</Link>
-            <Link href="#contact" className="inline-flex items-center rounded-2xl px-4 py-2 border border-white/15 hover:border-white/30 transition text-sm">Contact</Link>
+      <section id="experience" className="scroll-mt-24 border-t border-white/10 py-14 sm:py-20">
+        <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-blue-300">Career</p>
+            <h2 className="text-3xl font-bold">Experience</h2>
+            <p className="mt-2 text-sm text-slate-400">The work behind the titles — visible at a glance.</p>
           </div>
+          <Link href="/experience" className="text-sm font-medium text-blue-300 hover:text-blue-200">Full experience ↗</Link>
         </div>
-        <div className="grid sm:grid-cols-3 gap-3">
-          {[
-            { icon: "⚡", title: "Full-Stack Apps", desc: "End-to-end, production-ready, deployed.", stack: "React · Next.js · Node.js · PostgreSQL" },
-            { icon: "🤖", title: "AI / LLM Pipelines", desc: "RAG systems built for accuracy at scale.", stack: "OpenAI · LangChain · RAG · FastAPI" },
-            { icon: "🔧", title: "API & Backend Systems", desc: "High-traffic APIs with auth, migrations, and observability.", stack: "REST · OAuth2 · CI/CD · MongoDB" },
-          ].map(({ icon, title, desc, stack }) => (
-            <div key={title} className="border border-white/10 rounded-xl p-4 hover:border-white/20 transition space-y-2">
-              <p className="text-xl">{icon}</p>
-              <p className="font-semibold text-sm text-white">{title}</p>
-              <p className="text-slate-400 text-xs leading-relaxed">{desc}</p>
-              <p className="text-slate-600 text-xs">{stack}</p>
-            </div>
+        <div className="relative border-l border-blue-400/30 pl-6 sm:pl-8">
+          {experience.map((job) => (
+            <article key={job.company} className="relative mb-8 last:mb-0">
+              <span className="absolute -left-[31px] top-2 h-3 w-3 rounded-full border-2 border-blue-400 bg-[#0b1220] sm:-left-[39px]" />
+              <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                <div>
+                  <h3 className="text-lg font-semibold text-white">{job.role}</h3>
+                  <p className="text-sm font-medium text-blue-300">{job.company}</p>
+                </div>
+                <span className="text-xs text-slate-500">{job.period}</span>
+              </div>
+              <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-300">{job.description}</p>
+            </article>
           ))}
         </div>
       </section>
 
-      <section id="projects" className="py-16 space-y-8">
-        <div>
-          <h2 className="text-3xl font-bold">Highlighted Projects</h2>
-          <p className="text-slate-200 mt-2 text-sm">Production-grade systems built with clear trade-offs, measurable outcomes, and full deployment pipelines.</p>
-        </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-6">
+      <section id="projects" className="scroll-mt-24 border-t border-white/10 py-14 sm:py-20">
+        <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-blue-300">Selected work</p>
+        <h2 className="text-3xl font-bold">Featured Projects</h2>
+        <p className="mt-2 max-w-2xl text-sm text-slate-400">A few systems that show how I design, build, and ship software.</p>
+        <div className="mt-8 grid gap-5 md:grid-cols-2">
           <ProjectCard
-            title="Zealthy Mini EMR – Full-Stack Healthcare Management System"
-            tags={["React", "Node.js", "PostgreSQL", "OAuth2", "RBAC", "REST API"]}
-            description="Production-ready Electronic Medical Records system with role-based access control for patients and administrators. Features patient registration, appointment scheduling, prescription management, and medical history tracking with secure authentication and responsive UI."
-            deepDive={{
-              problem: "Healthcare data for patients and admins needed strict access separation, but a single-role API exposed all records to any authenticated user.",
-              solution: "Implemented RBAC at the middleware layer with JWT claims, separating patient and admin scopes. Designed normalized PostgreSQL schemas to isolate sensitive medical records and enforce data integrity via foreign key constraints.",
-              result: "Zero unauthorized cross-role data access in all test scenarios. Admin workflows reduced from multi-step manual processes to single-action dashboard operations."
-            }}
-            deployment="Vercel (frontend) + Railway (Node.js API + PostgreSQL). CI via GitHub Actions with build and lint checks on every PR."
+            title="Zealthy Mini EMR"
+            tags={["Next.js", "TypeScript", "Prisma", "PostgreSQL"]}
+            description="A mini electronic medical records platform with separate patient and admin experiences, appointment scheduling, and prescription management."
+            link="https://zealthy-mini-emr.netlify.app/"
             repo="https://github.com/ash-1703/mini-emr"
           />
           <ProjectCard
-            title="Insight Agent – Domain-Specific RAG System"
-            tags={["LangChain", "OpenAI", "Pinecone", "FastAPI", "RAG", "LLM Evaluation"]}
-            description="Retrieval-augmented LLM system with LangChain and OpenAI embeddings to answer domain-specific questions grounded in retrieved documents. Includes ingestion pipelines for PDF and HTML, semantic search over 1,000+ embedded chunks, and a custom evaluation harness."
-            deepDive={{
-              problem: "Base LLM responses hallucinated frequently on domain-specific documents, with no way to trace which source supported an answer.",
-              solution: "Built a hybrid retrieval pipeline: vector similarity search (Pinecone) re-ranked with a metadata filter to surface only verified chunks. Designed a schema-driven prompt template that forced the model to cite retrieved context before answering.",
-              result: "Reduced unsupported answers by ~40% on a 200-question evaluation set. LLM-graded factual precision improved from 61% to 87% across test batches."
-            }}
-            deployment="Netlify (React frontend) + FastAPI on Render. Evaluation pipeline runs as a standalone Python script with JSON report output."
-            link="https://insight-agent.netlify.app/"
-            repo="https://github.com/ash-1703/insight-agent"
+            title="InsightAgent — Retrieval-Augmented AI"
+            tags={["Python", "LangChain", "RAG", "LLM Evaluation"]}
+            description="An AI question-answering system designed to ground responses in retrieved documents rather than unsupported model output."
+          />
+          <ProjectCard
+            title="AutoAnnotate"
+            tags={["React", "FastAPI", "MongoDB", "AI"]}
+            description="A data-annotation workflow that uses AI-assisted pre-labeling and human review to speed up dataset preparation."
           />
         </div>
       </section>
 
-      <section id="contact" className="py-20">
-        <div className="card p-8 text-center">
-          <h2 className="text-2xl font-semibold">Let's build something</h2>
-          <p className="text-slate-200 mt-2">
-            Open to full-time roles and collaborations. Reach out for AI pipelines, full-stack apps, or backend systems.
-          </p>
-          <div className="mt-6 flex justify-center flex-wrap gap-4">
-            <a className="btn" href="mailto:aishwaryasambhajitupe@gmail.com">Email Me</a>
-            <a
-              className="inline-flex items-center gap-2 rounded-2xl px-4 py-2 border border-white/15 hover:border-white/30 transition"
-              target="_blank"
-              rel="noreferrer"
-              href="https://www.linkedin.com/in/aishwarya-tupe/"
-            >
-              LinkedIn
-            </a>
-            <a
-              className="inline-flex items-center gap-2 rounded-2xl px-4 py-2 border border-white/15 hover:border-white/30 transition"
-              target="_blank"
-              rel="noreferrer"
-              href="https://github.com/ash-1703"
-            >
-              GitHub
-            </a>
-            <a
-              className="inline-flex items-center gap-2 rounded-2xl px-4 py-2 bg-blue-500/10 border border-blue-400/30 hover:bg-blue-500/20 transition text-blue-200"
-              href="/api/resume"
-              download
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
-              </svg>
-              Download Resume
-            </a>
+      <section id="education" className="scroll-mt-24 border-t border-white/10 py-14 sm:py-20">
+        <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-blue-300">Education & growth</p>
+        <h2 className="text-3xl font-bold">Education & Professional Development</h2>
+        <div className="mt-8 grid gap-5 md:grid-cols-2">
+          <article className="card p-6">
+            <p className="text-xs text-slate-400">2022 – 2024</p>
+            <h3 className="mt-2 text-lg font-semibold">MS, Computer & Information Sciences</h3>
+            <p className="mt-1 text-sm text-blue-300">University of Texas at Arlington</p>
+            <p className="mt-3 text-sm text-slate-400">GPA 3.83/4.0</p>
+          </article>
+          <article className="card p-6">
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <span className="text-xs text-slate-400">2026 – 2027</span>
+              <span className="rounded-full border border-blue-400/30 bg-blue-400/10 px-2.5 py-1 text-xs text-blue-200">In progress</span>
+            </div>
+            <h3 className="mt-2 text-lg font-semibold">Google DigiPivot 2026</h3>
+            <p className="mt-1 text-sm text-blue-300">Selected Participant</p>
+            <p className="mt-3 text-sm leading-relaxed text-slate-400">A Google-sponsored learning initiative with IIM Calcutta as academic partner and Accenture LearnVantage as implementation partner, covering AI and digital skills.</p>
+            <a href="https://talentsprint.com/digipivot-google/" target="_blank" rel="noopener noreferrer" className="mt-4 inline-block text-sm text-blue-300 hover:text-blue-200">Program information ↗</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" className="scroll-mt-24 border-t border-white/10 py-16">
+        <div className="card space-y-4 p-8 text-center sm:p-12">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-300">Let's connect</p>
+          <h2 className="text-3xl font-bold">Interested in building something together?</h2>
+          <p className="mx-auto max-w-xl text-sm leading-relaxed text-slate-400">I'm open to software engineering opportunities, especially in product teams working on useful, meaningful technology.</p>
+          <div className="flex flex-wrap justify-center gap-3 pt-2">
+            <a className="btn" href="mailto:aishwaryasambhajitupe@gmail.com">Email Me ↗</a>
+            <a className="inline-flex items-center rounded-2xl border border-white/20 px-4 py-2 text-sm hover:border-white/40" href="https://www.linkedin.com/in/aishwarya-tupe/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            <a className="inline-flex items-center rounded-2xl border border-white/20 px-4 py-2 text-sm hover:border-white/40" href="https://github.com/ash-1703" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
           </div>
         </div>
       </section>
