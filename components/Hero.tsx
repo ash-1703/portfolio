@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import DeveloperScene from "@/components/DeveloperScene";
 
 export default function Hero() {
@@ -22,7 +23,13 @@ export default function Hero() {
           <a href="mailto:aishwaryasambhajitupe@gmail.com">Email ↗</a>
         </div>
       </div>
-      <DeveloperScene />
+      <div className="hero-art">
+        <DeveloperScene />
+        <div className="portrait-frame">
+          <Image src="/images/aishwarya_prof.webp" alt="Aishwarya Tupe" width={280} height={340} className="portrait-image" sizes="(max-width: 640px) 140px, 190px" priority />
+          <div className="portrait-caption"><span>✿</span> AISHWARYA TUPE / ENGINEER</div>
+        </div>
+      </div>
     </section>
   );
 }
