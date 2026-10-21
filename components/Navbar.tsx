@@ -2,92 +2,44 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import ThemeToggle from "@/components/ThemeToggle";
+
+const links = [
+  { label: "Experience", href: "/#experience" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Education", href: "/#education" },
+  { label: "Highlights", href: "/#highlights" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/#contact" },
+];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-
   return (
-    <nav className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
-      <Link href="/" className="font-semibold tracking-tight text-lg">
-        <span className="text-blue-400">Aishwarya</span> Tupe
+    <nav className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4">
+      <Link href="/" className="brand-logo" aria-label="Aishwarya Tupe home">
+        <span className="brand-symbol" aria-hidden="true"><span className="brand-terminal">&gt;_</span><span className="brand-petal">✿</span></span>
+        <span>Aishwarya <strong>Tupe</strong></span>
       </Link>
-
-      {/* Desktop nav */}
-      <div className="hidden md:flex items-center gap-6 text-sm text-slate-200">
-        <Link href="/" className="hover:text-white">Home</Link>
-        <Link href="/#projects" className="hover:text-white">Projects</Link>
-        <Link href="/learning" className="hover:text-white">Learning</Link>
-        <Link href="/blogs" className="hover:text-white">Blogs</Link>
-        <Link href="/certifications" className="hover:text-white">Certifications</Link>
-        <Link href="/about" className="hover:text-white">About</Link>
-        <Link href="/#contact" className="hover:text-white">Contact</Link>
-        <div className="flex items-center gap-2">
-          <a
-            href="https://drive.google.com/file/d/1JKFVEI4OrFMcqfxHlVwLdGiOXWG5joiQ/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn text-sm"
-          >
-            Resume
-          </a>
-          <a
-            href="/api/resume"
-            download
-            className="text-sm text-slate-300 hover:text-white"
-            title="Download resume"
-          >
-            ⤓
-          </a>
-        </div>
+      <div className="hidden items-center gap-6 text-sm md:flex">
+        {links.map(({label,href}) => (
+          <Link key={href} href={href} className="nav-link">{label}</Link>
+        ))}
       </div>
-
-      {/* Mobile hamburger */}
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="md:hidden p-2 text-slate-200 hover:text-white"
-        aria-label="Toggle menu"
-      >
-        {isOpen ? (
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        ) : (
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        )}
-      </button>
-
-      {/* Mobile menu */}
+      <div className="flex items-center gap-2">
+        <ThemeToggle />
+        <a href="/api/resume" className="nav-resume hidden sm:inline-flex">Resume ↗</a>
+        <button type="button" className="menu-toggle md:hidden" aria-label={isOpen ? "Close navigation" : "Open navigation"} aria-expanded={isOpen} onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? "✕" : "☰"}
+        </button>
+      </div>
       {isOpen && (
-        <div className="absolute top-full left-0 right-0 bg-[var(--bg)] border-b border-white/10 md:hidden">
-          <div className="flex flex-col px-4 py-3 space-y-3 text-sm text-slate-200">
-            <Link href="/" onClick={() => setIsOpen(false)} className="hover:text-white py-2">Home</Link>
-            <Link href="/#projects" onClick={() => setIsOpen(false)} className="hover:text-white py-2">Projects</Link>
-            <Link href="/learning" onClick={() => setIsOpen(false)} className="hover:text-white py-2">Learning</Link>
-            <Link href="/blogs" onClick={() => setIsOpen(false)} className="hover:text-white py-2">Blogs</Link>
-            <Link href="/certifications" onClick={() => setIsOpen(false)} className="hover:text-white py-2">Certifications</Link>
-            <Link href="/about" onClick={() => setIsOpen(false)} className="hover:text-white py-2">About</Link>
-            <Link href="/#contact" onClick={() => setIsOpen(false)} className="hover:text-white py-2">Contact</Link>
-            <div className="border-t border-white/10 pt-4 mt-2">
-              <a
-                href="https://drive.google.com/file/d/1JKFVEI4OrFMcqfxHlVwLdGiOXWG5joiQ/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white py-2 block"
-                onClick={() => setIsOpen(false)}
-              >
-                Resume
-              </a>
-              <a
-                href="/api/resume"
-                download
-                className="hover:text-white py-2 block"
-                onClick={() => setIsOpen(false)}
-              >
-                Download Resume
-              </a>
-            </div>
+        <div className="mobile-nav absolute left-0 right-0 top-full border-b px-6 py-5 shadow-xl md:hidden">
+          <div className="flex flex-col gap-4 text-sm">
+            {links.map(({label,href}) => (
+              <Link key={href} href={href} onClick={() => setIsOpen(false)} className="nav-link">{label}</Link>
+            ))}
+            <a href="/api/resume" onClick={() => setIsOpen(false)} className="nav-link sm:hidden">Resume ↗</a>
           </div>
         </div>
       )}
