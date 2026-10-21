@@ -65,9 +65,9 @@ function IllustratedPreview({ kind }: { kind: Kind }) {
   );
 }
 
-export default function ProjectShowcase({ project, featured = false }: { project: Project; featured?: boolean }) {
+export default function ProjectShowcase({ project }: { project: Project }) {
   return (
-    <article className={`showcase-card ${featured ? "showcase-featured" : ""}`}>
+    <article className="showcase-card">
       <div className="project-visual">
         {project.screenshot ? (
           <Image src={project.screenshot} alt={`Screenshot of ${project.title}`} width={1200} height={750} className="project-screenshot" sizes="(max-width: 768px) 100vw, 700px" />
