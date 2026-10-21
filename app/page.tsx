@@ -57,8 +57,8 @@ export default function Page() {
       <p className="section-eyebrow mb-3">03 / SELECTED WORK</p>
       <h2 className="section-heading">Projects worth exploring.</h2>
       <p className="muted-text mt-3 text-sm">A few examples of how I turn problems into software.</p>
-      <div className="mt-9 grid gap-6 lg:grid-cols-2">
-        {projects.map((project,i)=><ProjectShowcase key={project.number} project={project} featured={i===0}/>)}
+      <div className="mt-9 grid gap-6 lg:grid-cols-3">
+        {projects.map((project)=><ProjectShowcase key={project.number} project={project}/>)}
       </div>
     </section>
     <section id="education" className="section-line scroll-mt-24 border-t py-16 sm:py-20">
